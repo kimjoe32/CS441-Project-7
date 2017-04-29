@@ -8,30 +8,35 @@
 
 #import "GameTwoViewController.h"
 
-@interface GameTwoViewController ()
-
-@end
-
 @implementation GameTwoViewController
-
-- (void)viewDidLoad {
+static const uint32_t playerCategory = 0x1 << 0;
+static const uint32_t obstacleCategory = 0x1 << 1;
+-(void) viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    SKView * skView = (SKView*) self.view;
+    skView.showsFPS = TRUE;
+    skView.showsNodeCount = TRUE;
+    
+    SKScene *scene = [[GameTwoScene alloc] initWithSize:CGSizeMake(skView.bounds.size.width,
+                                                              skView.bounds.size.height)];
+    
+    [skView presentScene:scene];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void) createPlayer
+{
+    SKSpriteNode *player = [[SKSpriteNode alloc] initWithImageNamed:@"Player.png"];
+    player.position = CGPointMake(184, 530);
+    player.name = @"playerNode";
+    player.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(20, 20)];
+    
+    player.physicsBody.usesPreciseCollisionDetection = TRUE;
+    player.physicsBody.categoryBitMask = playerCategory;
+    
+//    [self addCh :player];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

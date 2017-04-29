@@ -6,8 +6,9 @@
 //  Copyright © 2017 Matt Perl, Joe Kim, Matt Spagnoli, Nick Seney. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
+#import <SpriteKit/SpriteKit.h>
+#import "GameTwoScene.h"
 @interface GameTwoViewController : UIViewController
 
 @end
