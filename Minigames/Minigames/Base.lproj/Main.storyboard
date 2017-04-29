@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jaq-Jp-5NG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1982" y="-403"/>
+            <point key="canvasLocation" x="1893" y="-430"/>
         </scene>
         <!--Game Five View Controller-->
         <scene sceneID="6Jc-CE-bzW">

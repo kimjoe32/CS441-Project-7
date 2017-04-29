@@ -10,7 +10,7 @@
 
 @implementation GameTwoViewController
 static const uint32_t playerCategory = 0x1 << 0;
-static const uint32_t obstacleCategory = 0x1 << 1;
+//static const uint32_t obstacleCategory = 0x1 << 1;
 -(void) viewDidLoad
 {
     [super viewDidLoad];

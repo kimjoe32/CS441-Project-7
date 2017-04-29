@@ -10,4 +10,5 @@
 
 @interface GameTwoScene : SKScene
 @property BOOL sceneCreated;
+@property NSArray *obstacleAnimation;
 @end
