@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		253A8C631EB5065B00572223 /* GameOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253A8C621EB5065B00572223 /* GameOneViewController.m */; };
 		C9D96E5F1EB17A730011B512 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D96E5E1EB17A730011B512 /* main.m */; };
 		C9D96E621EB17A730011B512 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D96E611EB17A730011B512 /* AppDelegate.m */; };
-		C9D96E641EB17A730011B512 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9D96E631EB17A730011B512 /* GameScene.sks */; };
 		C9D96E661EB17A730011B512 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9D96E651EB17A730011B512 /* Actions.sks */; };
 		C9D96E691EB17A730011B512 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D96E681EB17A730011B512 /* GameScene.m */; };
 		C9D96E6C1EB17A730011B512 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D96E6B1EB17A730011B512 /* GameViewController.m */; };
@@ -38,11 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		253A8C611EB5065B00572223 /* GameOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOneViewController.h; sourceTree = "<group>"; };
+		253A8C621EB5065B00572223 /* GameOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOneViewController.m; sourceTree = "<group>"; };
 		C9D96E5A1EB17A730011B512 /* Minigames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minigames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D96E5E1EB17A730011B512 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C9D96E601EB17A730011B512 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C9D96E611EB17A730011B512 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C9D96E631EB17A730011B512 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		C9D96E651EB17A730011B512 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		C9D96E671EB17A730011B512 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		C9D96E681EB17A730011B512 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
@@ -110,12 +111,13 @@
 			children = (
 				C9D96E601EB17A730011B512 /* AppDelegate.h */,
 				C9D96E611EB17A730011B512 /* AppDelegate.m */,
-				C9D96E631EB17A730011B512 /* GameScene.sks */,
 				C9D96E651EB17A730011B512 /* Actions.sks */,
 				C9D96E671EB17A730011B512 /* GameScene.h */,
 				C9D96E681EB17A730011B512 /* GameScene.m */,
 				C9D96E6A1EB17A730011B512 /* GameViewController.h */,
 				C9D96E6B1EB17A730011B512 /* GameViewController.m */,
+				253A8C611EB5065B00572223 /* GameOneViewController.h */,
+				253A8C621EB5065B00572223 /* GameOneViewController.m */,
 				C9D96E6D1EB17A730011B512 /* Main.storyboard */,
 				C9D96E701EB17A730011B512 /* Assets.xcassets */,
 				C9D96E721EB17A730011B512 /* LaunchScreen.storyboard */,
@@ -258,7 +260,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9D96E6F1EB17A730011B512 /* Main.storyboard in Resources */,
-				C9D96E641EB17A730011B512 /* GameScene.sks in Resources */,
 				C9D96E711EB17A730011B512 /* Assets.xcassets in Resources */,
 				C9D96E741EB17A730011B512 /* LaunchScreen.storyboard in Resources */,
 				C9D96E661EB17A730011B512 /* Actions.sks in Resources */,
@@ -286,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				253A8C631EB5065B00572223 /* GameOneViewController.m in Sources */,
 				C9D96E6C1EB17A730011B512 /* GameViewController.m in Sources */,
 				C9D96E621EB17A730011B512 /* AppDelegate.m in Sources */,
 				C9D96E691EB17A730011B512 /* GameScene.m in Sources */,
@@ -521,6 +523,7 @@
 				C9D96E901EB17A730011B512 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9D96E911EB17A730011B512 /* Build configuration list for PBXNativeTarget "MinigamesTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +532,7 @@
 				C9D96E931EB17A730011B512 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9D96E941EB17A730011B512 /* Build configuration list for PBXNativeTarget "MinigamesUITests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +541,7 @@
 				C9D96E961EB17A730011B512 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

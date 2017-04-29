@@ -25,36 +25,57 @@
                                 <rect key="frame" x="16" y="318" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Game 1"/>
+                                <connections>
+                                    <action selector="LoadGameOne:" destination="BV1-FR-VrT" eventType="touchUpInside" id="zSZ-1A-9je"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgO-27-haJ">
                                 <rect key="frame" x="16" y="385" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Game 2"/>
+                                <connections>
+                                    <action selector="LoadGameTwo:" destination="BV1-FR-VrT" eventType="touchUpInside" id="KbJ-ne-YZx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaL-Uy-EOP">
                                 <rect key="frame" x="16" y="453" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Game 3"/>
+                                <connections>
+                                    <action selector="LoadGameThree:" destination="BV1-FR-VrT" eventType="touchUpInside" id="qIN-vC-sWy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17K-gU-Xcn">
                                 <rect key="frame" x="141" y="318" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Game 4"/>
+                                <connections>
+                                    <action selector="LoadGameFour:" destination="BV1-FR-VrT" eventType="touchUpInside" id="FvT-r2-Rdf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gug-Xt-HZY">
                                 <rect key="frame" x="141" y="385" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Game 5"/>
+                                <connections>
+                                    <action selector="LoadGameFive:" destination="BV1-FR-VrT" eventType="touchUpInside" id="rSi-BQ-0CK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V40-OD-VRb">
                                 <rect key="frame" x="141" y="453" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Game 6"/>
+                                <connections>
+                                    <action selector="LoadGameSix:" destination="BV1-FR-VrT" eventType="touchUpInside" id="NZr-Zf-aUF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyr-D6-jNc">
                                 <rect key="frame" x="244" y="318" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Game 7"/>
+                                <connections>
+                                    <action selector="LoadGameSeven:" destination="BV1-FR-VrT" eventType="touchUpInside" id="yXL-tg-sFu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MiniGames" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wj1-lz-cts">
                                 <rect key="frame" x="43" y="48" width="288" height="69"/>
@@ -66,10 +87,147 @@
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="LoadGameOne" destination="EfE-V7-awB" id="Jd6-rV-pmg"/>
+                        <segue destination="AnI-T0-S1X" kind="show" identifier="GameOneSegue" id="TGA-OP-jLZ"/>
+                        <segue destination="pNE-NF-7eO" kind="show" identifier="GameTwoSegue" id="meZ-s3-oIA"/>
+                        <segue destination="hzc-Za-Eml" kind="show" identifier="GameThreeSegue" id="46m-F8-EfR"/>
+                        <segue destination="K9z-tL-jij" kind="show" identifier="GameFourSegue" id="KWc-8F-Xqc"/>
+                        <segue destination="bar-EN-QDT" kind="show" identifier="GameFiveSegue" id="GUb-0r-4ZQ"/>
+                        <segue destination="ZUY-Tl-zAP" kind="show" identifier="GameSixSegue" id="bes-Zd-MN3"/>
+                        <segue destination="GNn-w3-SzC" kind="show" identifier="GameSevenSegue" id="Ydw-aI-ysO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="135.38230884557723"/>
+            <point key="canvasLocation" x="49" y="134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GpL-vW-HF0">
+            <objects>
+                <viewController id="pNE-NF-7eO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O4O-E6-P7Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="DkP-cJ-5xa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rlS-ba-gQT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jaq-Jp-5NG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="289"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6Jc-CE-bzW">
+            <objects>
+                <viewController id="bar-EN-QDT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tqx-6j-b1U"/>
+                        <viewControllerLayoutGuide type="bottom" id="vOr-O8-cKb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2YR-Xo-I2q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0au-SZ-y33" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1921" y="288"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="H8B-LW-D0t">
+            <objects>
+                <viewController id="hzc-Za-Eml" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wio-qf-hlg"/>
+                        <viewControllerLayoutGuide type="bottom" id="xfO-kR-0gE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xVh-YN-dch">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YCj-HI-I3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="1060"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GIS-RE-y31">
+            <objects>
+                <viewController id="ZUY-Tl-zAP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g6P-RK-n2P"/>
+                        <viewControllerLayoutGuide type="bottom" id="Slt-bO-V2l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wxz-V7-zgY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvp-TL-9yZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1921" y="1059"/>
+        </scene>
+        <!--Game One View Controller-->
+        <scene sceneID="9Qr-CB-V3G">
+            <objects>
+                <viewController storyboardIdentifier="GameOneViewController" id="AnI-T0-S1X" customClass="GameOneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tQs-7D-JAZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="t3u-db-HMF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e0n-Xv-dqe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YwQ-a5-2xS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h1W-IX-H1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="-441"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="082-db-EJc">
+            <objects>
+                <viewController id="K9z-tL-jij" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KSl-ah-2gZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="eF4-4U-Uk8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BmJ-a7-bje">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g9F-Es-81M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1922" y="-441"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uws-eK-Ett">
+            <objects>
+                <viewController id="GNn-w3-SzC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uEC-28-UhZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="6sC-8B-l3R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MwA-HS-Rqy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IeX-Q5-oO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2854" y="-441"/>
         </scene>
     </scenes>
 </document>

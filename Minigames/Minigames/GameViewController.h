@@ -11,5 +11,6 @@
 #import <GameplayKit/GameplayKit.h>
 
 @interface GameViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIButton *LoadGameOne;
 
 @end

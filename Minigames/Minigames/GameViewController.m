@@ -7,6 +7,7 @@
 //
 
 #import "GameViewController.h"
+#import "GameOneViewController.h"
 #import "GameScene.h"
 
 @implementation GameViewController
@@ -14,19 +15,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // Load the SKScene from 'GameScene.sks'
-    GameScene *scene = (GameScene *)[SKScene nodeWithFileNamed:@"GameScene"];
     
-    // Set the scale mode to scale to fit the window
-    scene.scaleMode = SKSceneScaleModeAspectFill;
+   
+
+
+}
+- (IBAction)LoadGameOne:(id)sender {
+  [self performSegueWithIdentifier:@"GameOneSegue" sender:nil];
+}
+- (IBAction)LoadGameTwo:(id)sender {
+    [self performSegueWithIdentifier:@"GameTwoSegue" sender:nil];
+}
+- (IBAction)LoadGameThree:(id)sender {
+    [self performSegueWithIdentifier:@"GameThreeSegue" sender:nil];
+}
+- (IBAction)LoadGameFour:(id)sender {
+    [self performSegueWithIdentifier:@"GameFourSegue" sender:nil];
+}
+- (IBAction)LoadGameFive:(id)sender {
+    [self performSegueWithIdentifier:@"GameFiveSegue" sender:nil];
+}
+- (IBAction)LoadGameSix:(id)sender {
+    [self performSegueWithIdentifier:@"GameSixSegue" sender:nil];
+}
+- (IBAction)LoadGameSeven:(id)sender {
     
-    SKView *skView = (SKView *)self.view;
-    
-    // Present the scene
-    [skView presentScene:scene];
-    
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+    [self performSegueWithIdentifier:@"GameSevenSegue" sender:nil];
 }
 
 - (BOOL)shouldAutorotate {
