@@ -104,6 +104,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		258812461EB521940059196D /* GameOne */ = {
+			isa = PBXGroup;
+			children = (
+				253A8C611EB5065B00572223 /* GameOneViewController.h */,
+				253A8C621EB5065B00572223 /* GameOneViewController.m */,
+			);
+			name = GameOne;
+			sourceTree = "<group>";
+		};
+		258812471EB5219F0059196D /* GameTwo */ = {
+			isa = PBXGroup;
+			children = (
+				2588122D1EB51AB10059196D /* GameTwoViewController.h */,
+				2588122E1EB51AB10059196D /* GameTwoViewController.m */,
+			);
+			name = GameTwo;
+			sourceTree = "<group>";
+		};
+		258812481EB521A80059196D /* GameThree */ = {
+			isa = PBXGroup;
+			children = (
+				258812301EB51ADD0059196D /* GameThreeViewController.h */,
+				258812311EB51ADD0059196D /* GameThreeViewController.m */,
+			);
+			name = GameThree;
+			sourceTree = "<group>";
+		};
+		258812491EB521B10059196D /* GameFour */ = {
+			isa = PBXGroup;
+			children = (
+				258812331EB51AEC0059196D /* GameFourViewController.h */,
+				258812341EB51AEC0059196D /* GameFourViewController.m */,
+			);
+			name = GameFour;
+			sourceTree = "<group>";
+		};
+		2588124A1EB521B90059196D /* GameFive */ = {
+			isa = PBXGroup;
+			children = (
+				258812361EB51AFB0059196D /* GameFiveViewController.h */,
+				258812371EB51AFB0059196D /* GameFiveViewController.m */,
+			);
+			name = GameFive;
+			sourceTree = "<group>";
+		};
+		2588124B1EB521C00059196D /* GameSix */ = {
+			isa = PBXGroup;
+			children = (
+				258812391EB51B0D0059196D /* GameSixViewController.h */,
+				2588123A1EB51B0D0059196D /* GameSixViewController.m */,
+			);
+			name = GameSix;
+			sourceTree = "<group>";
+		};
+		2588124C1EB521C60059196D /* GameSeven */ = {
+			isa = PBXGroup;
+			children = (
+				2588123C1EB51B220059196D /* GameSevenViewController.h */,
+				2588123D1EB51B220059196D /* GameSevenViewController.m */,
+			);
+			name = GameSeven;
+			sourceTree = "<group>";
+		};
 		C9D96E511EB17A730011B512 = {
 			isa = PBXGroup;
 			children = (
@@ -134,20 +197,13 @@
 				C9D96E681EB17A730011B512 /* GameScene.m */,
 				C9D96E6A1EB17A730011B512 /* GameViewController.h */,
 				C9D96E6B1EB17A730011B512 /* GameViewController.m */,
-				253A8C611EB5065B00572223 /* GameOneViewController.h */,
-				253A8C621EB5065B00572223 /* GameOneViewController.m */,
-				2588122D1EB51AB10059196D /* GameTwoViewController.h */,
-				2588122E1EB51AB10059196D /* GameTwoViewController.m */,
-				258812301EB51ADD0059196D /* GameThreeViewController.h */,
-				258812311EB51ADD0059196D /* GameThreeViewController.m */,
-				258812331EB51AEC0059196D /* GameFourViewController.h */,
-				258812341EB51AEC0059196D /* GameFourViewController.m */,
-				258812361EB51AFB0059196D /* GameFiveViewController.h */,
-				258812371EB51AFB0059196D /* GameFiveViewController.m */,
-				258812391EB51B0D0059196D /* GameSixViewController.h */,
-				2588123A1EB51B0D0059196D /* GameSixViewController.m */,
-				2588123C1EB51B220059196D /* GameSevenViewController.h */,
-				2588123D1EB51B220059196D /* GameSevenViewController.m */,
+				258812461EB521940059196D /* GameOne */,
+				258812471EB5219F0059196D /* GameTwo */,
+				258812481EB521A80059196D /* GameThree */,
+				258812491EB521B10059196D /* GameFour */,
+				2588124A1EB521B90059196D /* GameFive */,
+				2588124B1EB521C00059196D /* GameSix */,
+				2588124C1EB521C60059196D /* GameSeven */,
 				C9D96E6D1EB17A730011B512 /* Main.storyboard */,
 				C9D96E701EB17A730011B512 /* Assets.xcassets */,
 				C9D96E721EB17A730011B512 /* LaunchScreen.storyboard */,
