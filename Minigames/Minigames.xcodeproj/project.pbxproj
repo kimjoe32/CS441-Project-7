@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		253A8C631EB5065B00572223 /* GameOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253A8C621EB5065B00572223 /* GameOneViewController.m */; };
+		2588122F1EB51AB10059196D /* GameTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2588122E1EB51AB10059196D /* GameTwoViewController.m */; };
+		258812321EB51ADD0059196D /* GameThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 258812311EB51ADD0059196D /* GameThreeViewController.m */; };
+		258812351EB51AEC0059196D /* GameFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 258812341EB51AEC0059196D /* GameFourViewController.m */; };
+		258812381EB51AFB0059196D /* GameFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 258812371EB51AFB0059196D /* GameFiveViewController.m */; };
+		2588123B1EB51B0D0059196D /* GameSixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2588123A1EB51B0D0059196D /* GameSixViewController.m */; };
+		2588123E1EB51B220059196D /* GameSevenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2588123D1EB51B220059196D /* GameSevenViewController.m */; };
 		C9D96E5F1EB17A730011B512 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D96E5E1EB17A730011B512 /* main.m */; };
 		C9D96E621EB17A730011B512 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D96E611EB17A730011B512 /* AppDelegate.m */; };
 		C9D96E661EB17A730011B512 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9D96E651EB17A730011B512 /* Actions.sks */; };
@@ -40,6 +46,18 @@
 /* Begin PBXFileReference section */
 		253A8C611EB5065B00572223 /* GameOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOneViewController.h; sourceTree = "<group>"; };
 		253A8C621EB5065B00572223 /* GameOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOneViewController.m; sourceTree = "<group>"; };
+		2588122D1EB51AB10059196D /* GameTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTwoViewController.h; sourceTree = "<group>"; };
+		2588122E1EB51AB10059196D /* GameTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTwoViewController.m; sourceTree = "<group>"; };
+		258812301EB51ADD0059196D /* GameThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameThreeViewController.h; sourceTree = "<group>"; };
+		258812311EB51ADD0059196D /* GameThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameThreeViewController.m; sourceTree = "<group>"; };
+		258812331EB51AEC0059196D /* GameFourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameFourViewController.h; sourceTree = "<group>"; };
+		258812341EB51AEC0059196D /* GameFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameFourViewController.m; sourceTree = "<group>"; };
+		258812361EB51AFB0059196D /* GameFiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameFiveViewController.h; sourceTree = "<group>"; };
+		258812371EB51AFB0059196D /* GameFiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameFiveViewController.m; sourceTree = "<group>"; };
+		258812391EB51B0D0059196D /* GameSixViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSixViewController.h; sourceTree = "<group>"; };
+		2588123A1EB51B0D0059196D /* GameSixViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSixViewController.m; sourceTree = "<group>"; };
+		2588123C1EB51B220059196D /* GameSevenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSevenViewController.h; sourceTree = "<group>"; };
+		2588123D1EB51B220059196D /* GameSevenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSevenViewController.m; sourceTree = "<group>"; };
 		C9D96E5A1EB17A730011B512 /* Minigames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minigames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D96E5E1EB17A730011B512 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C9D96E601EB17A730011B512 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,6 +136,18 @@
 				C9D96E6B1EB17A730011B512 /* GameViewController.m */,
 				253A8C611EB5065B00572223 /* GameOneViewController.h */,
 				253A8C621EB5065B00572223 /* GameOneViewController.m */,
+				2588122D1EB51AB10059196D /* GameTwoViewController.h */,
+				2588122E1EB51AB10059196D /* GameTwoViewController.m */,
+				258812301EB51ADD0059196D /* GameThreeViewController.h */,
+				258812311EB51ADD0059196D /* GameThreeViewController.m */,
+				258812331EB51AEC0059196D /* GameFourViewController.h */,
+				258812341EB51AEC0059196D /* GameFourViewController.m */,
+				258812361EB51AFB0059196D /* GameFiveViewController.h */,
+				258812371EB51AFB0059196D /* GameFiveViewController.m */,
+				258812391EB51B0D0059196D /* GameSixViewController.h */,
+				2588123A1EB51B0D0059196D /* GameSixViewController.m */,
+				2588123C1EB51B220059196D /* GameSevenViewController.h */,
+				2588123D1EB51B220059196D /* GameSevenViewController.m */,
 				C9D96E6D1EB17A730011B512 /* Main.storyboard */,
 				C9D96E701EB17A730011B512 /* Assets.xcassets */,
 				C9D96E721EB17A730011B512 /* LaunchScreen.storyboard */,
@@ -287,11 +317,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				258812351EB51AEC0059196D /* GameFourViewController.m in Sources */,
 				253A8C631EB5065B00572223 /* GameOneViewController.m in Sources */,
 				C9D96E6C1EB17A730011B512 /* GameViewController.m in Sources */,
+				2588123B1EB51B0D0059196D /* GameSixViewController.m in Sources */,
 				C9D96E621EB17A730011B512 /* AppDelegate.m in Sources */,
 				C9D96E691EB17A730011B512 /* GameScene.m in Sources */,
+				258812321EB51ADD0059196D /* GameThreeViewController.m in Sources */,
+				2588123E1EB51B220059196D /* GameSevenViewController.m in Sources */,
 				C9D96E5F1EB17A730011B512 /* main.m in Sources */,
+				2588122F1EB51AB10059196D /* GameTwoViewController.m in Sources */,
+				258812381EB51AFB0059196D /* GameFiveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
