@@ -38,40 +38,31 @@
 
 
 - (void)touchDownAtPoint:(CGPoint)pos {
-    SKShapeNode *n = [_spinnyNode copy];
-    n.position = pos;
-    n.strokeColor = [SKColor greenColor];
-    [self addChild:n];
+  
 }
 
 - (void)touchMovedToPoint:(CGPoint)pos {
-    SKShapeNode *n = [_spinnyNode copy];
-    n.position = pos;
-    n.strokeColor = [SKColor blueColor];
-    [self addChild:n];
+   
 }
 
 - (void)touchUpAtPoint:(CGPoint)pos {
-    SKShapeNode *n = [_spinnyNode copy];
-    n.position = pos;
-    n.strokeColor = [SKColor redColor];
-    [self addChild:n];
+  
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     // Run 'Pulse' action from 'Actions.sks'
-    [_label runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
     
-    for (UITouch *t in touches) {[self touchDownAtPoint:[t locationInNode:self]];}
+    
+    
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-    for (UITouch *t in touches) {[self touchMovedToPoint:[t locationInNode:self]];}
+    
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    for (UITouch *t in touches) {[self touchUpAtPoint:[t locationInNode:self]];}
+    
 }
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    for (UITouch *t in touches) {[self touchUpAtPoint:[t locationInNode:self]];}
+    
 }
 
 
