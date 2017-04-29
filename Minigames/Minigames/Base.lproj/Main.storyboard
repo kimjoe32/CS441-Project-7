@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgO-27-haJ">
-                                <rect key="frame" x="16" y="385" width="115" height="30"/>
+                                <rect key="frame" x="130" y="318" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Game 2"/>
                                 <connections>
@@ -38,7 +38,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaL-Uy-EOP">
-                                <rect key="frame" x="16" y="453" width="115" height="30"/>
+                                <rect key="frame" x="244" y="318" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Game 3"/>
                                 <connections>
@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17K-gU-Xcn">
-                                <rect key="frame" x="141" y="318" width="115" height="30"/>
+                                <rect key="frame" x="16" y="385" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Game 4"/>
                                 <connections>
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gug-Xt-HZY">
-                                <rect key="frame" x="141" y="385" width="115" height="30"/>
+                                <rect key="frame" x="130" y="385" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Game 5"/>
                                 <connections>
@@ -62,19 +62,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V40-OD-VRb">
-                                <rect key="frame" x="141" y="453" width="115" height="30"/>
+                                <rect key="frame" x="244" y="385" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Game 6"/>
                                 <connections>
                                     <action selector="LoadGameSix:" destination="BV1-FR-VrT" eventType="touchUpInside" id="NZr-Zf-aUF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyr-D6-jNc">
-                                <rect key="frame" x="244" y="318" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Game 7"/>
-                                <connections>
-                                    <action selector="LoadGameSeven:" destination="BV1-FR-VrT" eventType="touchUpInside" id="yXL-tg-sFu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MiniGames" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wj1-lz-cts">
@@ -84,6 +76,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyr-D6-jNc">
+                                <rect key="frame" x="16" y="447" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Game 7"/>
+                                <connections>
+                                    <action selector="LoadGameSeven:" destination="BV1-FR-VrT" eventType="touchUpInside" id="yXL-tg-sFu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="49" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Two View Controller-->
         <scene sceneID="GpL-vW-HF0">
             <objects>
-                <viewController id="pNE-NF-7eO" sceneMemberID="viewController">
+                <viewController id="pNE-NF-7eO" customClass="GameTwoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O4O-E6-P7Y"/>
                         <viewControllerLayoutGuide type="bottom" id="DkP-cJ-5xa"/>
@@ -118,12 +118,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jaq-Jp-5NG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="289"/>
+            <point key="canvasLocation" x="1982" y="-403"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Five View Controller-->
         <scene sceneID="6Jc-CE-bzW">
             <objects>
-                <viewController id="bar-EN-QDT" sceneMemberID="viewController">
+                <viewController id="bar-EN-QDT" customClass="GameFiveViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tqx-6j-b1U"/>
                         <viewControllerLayoutGuide type="bottom" id="vOr-O8-cKb"/>
@@ -138,10 +138,10 @@
             </objects>
             <point key="canvasLocation" x="1921" y="288"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Three View Controller-->
         <scene sceneID="H8B-LW-D0t">
             <objects>
-                <viewController id="hzc-Za-Eml" sceneMemberID="viewController">
+                <viewController id="hzc-Za-Eml" customClass="GameThreeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wio-qf-hlg"/>
                         <viewControllerLayoutGuide type="bottom" id="xfO-kR-0gE"/>
@@ -154,12 +154,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCj-HI-I3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="1060"/>
+            <point key="canvasLocation" x="2751" y="-418"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Six View Controller-->
         <scene sceneID="GIS-RE-y31">
             <objects>
-                <viewController id="ZUY-Tl-zAP" sceneMemberID="viewController">
+                <viewController id="ZUY-Tl-zAP" customClass="GameSixViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g6P-RK-n2P"/>
                         <viewControllerLayoutGuide type="bottom" id="Slt-bO-V2l"/>
@@ -172,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvp-TL-9yZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1921" y="1059"/>
+            <point key="canvasLocation" x="2750" y="313"/>
         </scene>
         <!--Game One View Controller-->
         <scene sceneID="9Qr-CB-V3G">
@@ -193,10 +193,10 @@
             </objects>
             <point key="canvasLocation" x="903" y="-441"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Four View Controller-->
         <scene sceneID="082-db-EJc">
             <objects>
-                <viewController id="K9z-tL-jij" sceneMemberID="viewController">
+                <viewController id="K9z-tL-jij" customClass="GameFourViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KSl-ah-2gZ"/>
                         <viewControllerLayoutGuide type="bottom" id="eF4-4U-Uk8"/>
@@ -209,12 +209,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9F-Es-81M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1922" y="-441"/>
+            <point key="canvasLocation" x="902" y="287"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Seven View Controller-->
         <scene sceneID="uws-eK-Ett">
             <objects>
-                <viewController id="GNn-w3-SzC" sceneMemberID="viewController">
+                <viewController id="GNn-w3-SzC" customClass="GameSevenViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uEC-28-UhZ"/>
                         <viewControllerLayoutGuide type="bottom" id="6sC-8B-l3R"/>
@@ -227,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IeX-Q5-oO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2854" y="-441"/>
+            <point key="canvasLocation" x="932" y="1103"/>
         </scene>
     </scenes>
 </document>
