@@ -18,5 +18,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *resetButton;
 @property (strong, nonatomic) IBOutlet UIButton *firstButtonPressed;
 @property (strong, nonatomic) IBOutlet UIButton *secondButtonPressed;
+@property (strong, nonatomic) IBOutlet UIButton *thirdButtonPressed;
+@property (strong, nonatomic) IBOutlet UIButton *fourthButtonPressed;
+@property (strong, nonatomic) IBOutlet UIButton *fifthButtonPressed;
+@property (strong, nonatomic) IBOutlet UIButton *sixthButtonPressed;
 
 @end
