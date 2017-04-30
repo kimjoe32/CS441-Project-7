@@ -14,17 +14,9 @@
 		258812381EB51AFB0059196D /* GameFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 258812371EB51AFB0059196D /* GameFiveViewController.m */; };
 		2588123B1EB51B0D0059196D /* GameSixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2588123A1EB51B0D0059196D /* GameSixViewController.m */; };
 		2588123E1EB51B220059196D /* GameSevenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2588123D1EB51B220059196D /* GameSevenViewController.m */; };
-		6C8C2F921EB524DA004A52FC /* Player.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2F911EB524DA004A52FC /* Player.png */; };
 		6C8C2F951EB52AB4004A52FC /* GameTwoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8C2F941EB52AB4004A52FC /* GameTwoScene.m */; };
-		6C8C2FA01EB537CD004A52FC /* Obs6.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2F971EB537CD004A52FC /* Obs6.png */; };
-		6C8C2FA11EB537CD004A52FC /* Obs7.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2F981EB537CD004A52FC /* Obs7.png */; };
-		6C8C2FA21EB537CD004A52FC /* Obs8.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2F991EB537CD004A52FC /* Obs8.png */; };
-		6C8C2FA31EB537CD004A52FC /* Obs9.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2F9A1EB537CD004A52FC /* Obs9.png */; };
 		6C8C2FA41EB537CD004A52FC /* Obs1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2F9B1EB537CD004A52FC /* Obs1.png */; };
-		6C8C2FA51EB537CD004A52FC /* Obs2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2F9C1EB537CD004A52FC /* Obs2.png */; };
-		6C8C2FA61EB537CD004A52FC /* Obs3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2F9D1EB537CD004A52FC /* Obs3.png */; };
-		6C8C2FA71EB537CD004A52FC /* Obs4.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2F9E1EB537CD004A52FC /* Obs4.png */; };
-		6C8C2FA81EB537CD004A52FC /* Obs5.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2F9F1EB537CD004A52FC /* Obs5.png */; };
+		6C8C2FEA1EB5C062004A52FC /* Player1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2FE91EB5C062004A52FC /* Player1.png */; };
 		C9028BC91EB5599C00047201 /* GameFourPictures in Resources */ = {isa = PBXBuildFile; fileRef = C9028BC81EB5599C00047201 /* GameFourPictures */; };
 		C9D96E5F1EB17A730011B512 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D96E5E1EB17A730011B512 /* main.m */; };
 		C9D96E621EB17A730011B512 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D96E611EB17A730011B512 /* AppDelegate.m */; };
@@ -70,18 +62,10 @@
 		2588123A1EB51B0D0059196D /* GameSixViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSixViewController.m; sourceTree = "<group>"; };
 		2588123C1EB51B220059196D /* GameSevenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSevenViewController.h; sourceTree = "<group>"; };
 		2588123D1EB51B220059196D /* GameSevenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSevenViewController.m; sourceTree = "<group>"; };
-		6C8C2F911EB524DA004A52FC /* Player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Player.png; sourceTree = "<group>"; };
 		6C8C2F931EB52AA5004A52FC /* GameTwoScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameTwoScene.h; sourceTree = "<group>"; };
 		6C8C2F941EB52AB4004A52FC /* GameTwoScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTwoScene.m; sourceTree = "<group>"; };
-		6C8C2F971EB537CD004A52FC /* Obs6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Obs6.png; sourceTree = "<group>"; };
-		6C8C2F981EB537CD004A52FC /* Obs7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Obs7.png; sourceTree = "<group>"; };
-		6C8C2F991EB537CD004A52FC /* Obs8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Obs8.png; sourceTree = "<group>"; };
-		6C8C2F9A1EB537CD004A52FC /* Obs9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Obs9.png; sourceTree = "<group>"; };
 		6C8C2F9B1EB537CD004A52FC /* Obs1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Obs1.png; sourceTree = "<group>"; };
-		6C8C2F9C1EB537CD004A52FC /* Obs2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Obs2.png; sourceTree = "<group>"; };
-		6C8C2F9D1EB537CD004A52FC /* Obs3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Obs3.png; sourceTree = "<group>"; };
-		6C8C2F9E1EB537CD004A52FC /* Obs4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Obs4.png; sourceTree = "<group>"; };
-		6C8C2F9F1EB537CD004A52FC /* Obs5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Obs5.png; sourceTree = "<group>"; };
+		6C8C2FE91EB5C062004A52FC /* Player1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Player1.png; sourceTree = "<group>"; };
 		C9028BC81EB5599C00047201 /* GameFourPictures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GameFourPictures; sourceTree = "<group>"; };
 		C9D96E5A1EB17A730011B512 /* Minigames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minigames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D96E5E1EB17A730011B512 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -141,7 +125,7 @@
 		258812471EB5219F0059196D /* GameTwo */ = {
 			isa = PBXGroup;
 			children = (
-				6C8C2F901EB524DA004A52FC /* GameOnePictures */,
+				6C8C2F901EB524DA004A52FC /* GameTwoPictures */,
 				6C8C2F931EB52AA5004A52FC /* GameTwoScene.h */,
 				6C8C2F941EB52AB4004A52FC /* GameTwoScene.m */,
 				2588122D1EB51AB10059196D /* GameTwoViewController.h */,
@@ -196,20 +180,13 @@
 			name = GameSeven;
 			sourceTree = "<group>";
 		};
-		6C8C2F901EB524DA004A52FC /* GameOnePictures */ = {
+		6C8C2F901EB524DA004A52FC /* GameTwoPictures */ = {
 			isa = PBXGroup;
 			children = (
+				6C8C2FE91EB5C062004A52FC /* Player1.png */,
 				6C8C2F9B1EB537CD004A52FC /* Obs1.png */,
-				6C8C2F9C1EB537CD004A52FC /* Obs2.png */,
-				6C8C2F9D1EB537CD004A52FC /* Obs3.png */,
-				6C8C2F9E1EB537CD004A52FC /* Obs4.png */,
-				6C8C2F9F1EB537CD004A52FC /* Obs5.png */,
-				6C8C2F971EB537CD004A52FC /* Obs6.png */,
-				6C8C2F981EB537CD004A52FC /* Obs7.png */,
-				6C8C2F991EB537CD004A52FC /* Obs8.png */,
-				6C8C2F9A1EB537CD004A52FC /* Obs9.png */,
-				6C8C2F911EB524DA004A52FC /* Player.png */,
 			);
+			name = GameTwoPictures;
 			path = GameOnePictures;
 			sourceTree = "<group>";
 		};
@@ -391,21 +368,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C8C2FA31EB537CD004A52FC /* Obs9.png in Resources */,
-				6C8C2FA01EB537CD004A52FC /* Obs6.png in Resources */,
 				6C8C2FA41EB537CD004A52FC /* Obs1.png in Resources */,
+				6C8C2FEA1EB5C062004A52FC /* Player1.png in Resources */,
 				C9028BC91EB5599C00047201 /* GameFourPictures in Resources */,
-				6C8C2FA11EB537CD004A52FC /* Obs7.png in Resources */,
-				6C8C2FA21EB537CD004A52FC /* Obs8.png in Resources */,
-				6C8C2FA71EB537CD004A52FC /* Obs4.png in Resources */,
-				6C8C2FA51EB537CD004A52FC /* Obs2.png in Resources */,
-				6C8C2FA61EB537CD004A52FC /* Obs3.png in Resources */,
-				6C8C2FA81EB537CD004A52FC /* Obs5.png in Resources */,
 				C9D96E6F1EB17A730011B512 /* Main.storyboard in Resources */,
 				C9D96E711EB17A730011B512 /* Assets.xcassets in Resources */,
 				C9D96E741EB17A730011B512 /* LaunchScreen.storyboard in Resources */,
 				C9D96E661EB17A730011B512 /* Actions.sks in Resources */,
-				6C8C2F921EB524DA004A52FC /* Player.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
