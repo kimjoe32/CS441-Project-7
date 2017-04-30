@@ -25,6 +25,7 @@
         [skView presentScene:scene];
     }
 }
+
 -(void) viewDidLoad
 {
     [super viewDidLoad];
@@ -71,8 +72,5 @@
     
     [self presentViewController:alert animated:TRUE completion:nil];
 }
-
-
-
 
 @end

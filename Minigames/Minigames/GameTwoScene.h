@@ -14,6 +14,6 @@
 @property (nonatomic) NSInteger score;
 @property (weak, nonatomic) UIViewController * viewController;
 
-- (void) setScore;
+
 - (void) restartScene;
 @end

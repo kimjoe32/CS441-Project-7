@@ -6,8 +6,11 @@
 //  Copyright © 2017 Matt Perl, Joe Kim, Matt Spagnoli, Nick Seney. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <SpriteKit/SpriteKit.h>
+#import "GameThreeScene.h"
 
 @interface GameThreeViewController : UIViewController
+@property SKView * skView;
 
+- (void) displayAlert:(SKScene *) scene;
 @end
