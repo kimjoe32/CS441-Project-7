@@ -25,6 +25,7 @@
 		6C8C2FA61EB537CD004A52FC /* Obs3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2F9D1EB537CD004A52FC /* Obs3.png */; };
 		6C8C2FA71EB537CD004A52FC /* Obs4.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2F9E1EB537CD004A52FC /* Obs4.png */; };
 		6C8C2FA81EB537CD004A52FC /* Obs5.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2F9F1EB537CD004A52FC /* Obs5.png */; };
+		C9028BC91EB5599C00047201 /* GameFourPictures in Resources */ = {isa = PBXBuildFile; fileRef = C9028BC81EB5599C00047201 /* GameFourPictures */; };
 		C9D96E5F1EB17A730011B512 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D96E5E1EB17A730011B512 /* main.m */; };
 		C9D96E621EB17A730011B512 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D96E611EB17A730011B512 /* AppDelegate.m */; };
 		C9D96E661EB17A730011B512 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9D96E651EB17A730011B512 /* Actions.sks */; };
@@ -81,6 +82,7 @@
 		6C8C2F9D1EB537CD004A52FC /* Obs3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Obs3.png; sourceTree = "<group>"; };
 		6C8C2F9E1EB537CD004A52FC /* Obs4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Obs4.png; sourceTree = "<group>"; };
 		6C8C2F9F1EB537CD004A52FC /* Obs5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Obs5.png; sourceTree = "<group>"; };
+		C9028BC81EB5599C00047201 /* GameFourPictures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GameFourPictures; sourceTree = "<group>"; };
 		C9D96E5A1EB17A730011B512 /* Minigames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minigames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D96E5E1EB17A730011B512 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C9D96E601EB17A730011B512 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		258812491EB521B10059196D /* GameFour */ = {
 			isa = PBXGroup;
 			children = (
+				C9028BC81EB5599C00047201 /* GameFourPictures */,
 				258812331EB51AEC0059196D /* GameFourViewController.h */,
 				258812341EB51AEC0059196D /* GameFourViewController.m */,
 			);
@@ -391,6 +394,7 @@
 				6C8C2FA31EB537CD004A52FC /* Obs9.png in Resources */,
 				6C8C2FA01EB537CD004A52FC /* Obs6.png in Resources */,
 				6C8C2FA41EB537CD004A52FC /* Obs1.png in Resources */,
+				C9028BC91EB5599C00047201 /* GameFourPictures in Resources */,
 				6C8C2FA11EB537CD004A52FC /* Obs7.png in Resources */,
 				6C8C2FA21EB537CD004A52FC /* Obs8.png in Resources */,
 				6C8C2FA71EB537CD004A52FC /* Obs4.png in Resources */,
