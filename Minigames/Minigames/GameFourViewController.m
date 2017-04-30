@@ -92,6 +92,8 @@ UIImage *tmpImg;
         gridInd2 = counter%6;
         
         randSeed = arc4random_uniform(6);
+        tmpImg = [UIImage imageNamed:@"questionMarkCardImg.jpg"];
+        [[_GridButtons objectAtIndex:(counter)] setBackgroundImage:tmpImg forState:UIControlStateNormal];
         switch(randSeed){
             case 0: //2 img
                 if(num2Imgs < 6){
@@ -140,12 +142,14 @@ UIImage *tmpImg;
             loopBreak = true;
         }
     }
+    /*
     for(int i = 0; i < 6; i++){
         for(int j = 0; j < 6; j++){
             printf("%d", gridMap[i][j]);
         }
         printf("\n");
     }
+     */
 }
 
 - (void) setButtonImage:(int) intid :(int) ind1 :(int) ind2{
@@ -178,16 +182,42 @@ UIImage *tmpImg;
     }
 }
 
+- (IBAction) resetGame:(id) selector{
+    [self setHighScore];
+    currentScore = 0;
+    [self updateCurrentScore];
+    [self initializeGrid];
+}
+
 - (void) decrementTries{
     int numTries = [[_remainingTriesField text] intValue];
     
-    if(numTries ){
-        
+    if(numTries == 1){
+        [self initializeGrid];
+        [self setHighScore];
+        currentScore = 0;
+        [self updateCurrentScore];
+    }
+    else{
+        numTries--;
+        [_remainingTriesField setText:[NSString stringWithFormat:@"%d", numTries]];
     }
     
 }
 
+- (void) setHighScore{
+    int cs = [[_CSTextField text] intValue];
+    int hs = [[_HSTextField text] intValue];
+    
+    if(cs > hs){
+        [_HSTextField setText:[NSString stringWithFormat:@"%d", cs]];
+    }
+    
+}
 
+- (void) updateCurrentScore{
+    [_CSTextField setText:[NSString stringWithFormat:@"%d", currentScore]];
+}
 
 - (IBAction) matchButtonPressed:(id) sender{
     
@@ -220,6 +250,7 @@ UIImage *tmpImg;
                 tmpImg = [UIImage imageNamed:@"questionMarkCardImg.jpg"];
                 [[_GridButtons objectAtIndex:(but1Ind1*6+but1Ind2)] setBackgroundImage:tmpImg forState:UIControlStateNormal];
                 [[_GridButtons objectAtIndex:(but2Ind1*6+but2Ind2)] setBackgroundImage:tmpImg forState:UIControlStateNormal];
+                [self decrementTries];
             }
             
             break;
@@ -243,6 +274,7 @@ UIImage *tmpImg;
                 [[_GridButtons objectAtIndex:(but1Ind1*6+but1Ind2)] setBackgroundImage:tmpImg forState:UIControlStateNormal];
                 [[_GridButtons objectAtIndex:(but2Ind1*6+but2Ind2)] setBackgroundImage:tmpImg forState:UIControlStateNormal];
                 [[_GridButtons objectAtIndex:(but3Ind1*6+but3Ind2)] setBackgroundImage:tmpImg forState:UIControlStateNormal];
+                [self decrementTries];
             }
             
             break;
@@ -268,6 +300,7 @@ UIImage *tmpImg;
                 [[_GridButtons objectAtIndex:(but2Ind1*6+but2Ind2)] setBackgroundImage:tmpImg forState:UIControlStateNormal];
                 [[_GridButtons objectAtIndex:(but3Ind1*6+but3Ind2)] setBackgroundImage:tmpImg forState:UIControlStateNormal];
                 [[_GridButtons objectAtIndex:(but4Ind1*6+but4Ind2)] setBackgroundImage:tmpImg forState:UIControlStateNormal];
+                [self decrementTries];
             }
             break;
         case 4:
@@ -294,6 +327,7 @@ UIImage *tmpImg;
                 [[_GridButtons objectAtIndex:(but3Ind1*6+but3Ind2)] setBackgroundImage:tmpImg forState:UIControlStateNormal];
                 [[_GridButtons objectAtIndex:(but4Ind1*6+but4Ind2)] setBackgroundImage:tmpImg forState:UIControlStateNormal];
                 [[_GridButtons objectAtIndex:(but5Ind1*6+but5Ind2)] setBackgroundImage:tmpImg forState:UIControlStateNormal];
+                [self decrementTries];
             }
             break;
         case 5:
@@ -322,12 +356,15 @@ UIImage *tmpImg;
                 [[_GridButtons objectAtIndex:(but4Ind1*6+but4Ind2)] setBackgroundImage:tmpImg forState:UIControlStateNormal];
                 [[_GridButtons objectAtIndex:(but5Ind1*6+but5Ind2)] setBackgroundImage:tmpImg forState:UIControlStateNormal];
                 [[_GridButtons objectAtIndex:(but6Ind1*6+but6Ind2)] setBackgroundImage:tmpImg forState:UIControlStateNormal];
+                [self decrementTries];
             }
             break;
     }
-    
-    if(button6Matched == true && numMatches == 6){
+    NSLog(@"%d\n", numMatches);
+    if(button6Matched == true && numMatches == 5){
         //add to current score for all matches
+        currentScore += 10000;
+        [self updateCurrentScore];
         buttonClicks = 0;
         button2Matched = false;
         button3Matched = false;
@@ -336,10 +373,12 @@ UIImage *tmpImg;
         button6Matched = false;
         numMatches = 0;
         //reset game
-        
+        [self initializeGrid];
     }
     else if(button6Matched == true){
         //add to current score for 1 match
+        currentScore += 1000;
+        [self updateCurrentScore];
         buttonClicks = 0;
         button2Matched = false;
         button3Matched = false;
