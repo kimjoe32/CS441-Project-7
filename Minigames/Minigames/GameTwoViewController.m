@@ -14,11 +14,9 @@
 -(void) viewWillAppear:(BOOL)animated
 {
     if (!skView){
-        NSLog(@"%s - (re)creating skView",__PRETTY_FUNCTION__);
         skView = (SKView*) self.view;
         skView.showsFPS = TRUE;
         skView.showsNodeCount = TRUE;
-//        [self.view addSubview:skView];
         GameTwoScene *scene = [[GameTwoScene alloc] initWithSize:CGSizeMake(skView.bounds.size.width,
                                                                         skView.bounds.size.height)];
     
@@ -60,7 +58,6 @@
         
         if (!skView)
         {
-            NSLog(@"%s - removing skView",__PRETTY_FUNCTION__);
             [skView removeFromSuperview];
             [skView presentScene:nil];
             skView = nil;

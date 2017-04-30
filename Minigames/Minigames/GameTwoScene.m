@@ -17,15 +17,11 @@
 static const uint32_t playerCategory = 0x1 << 0;
 static const uint32_t obstacleCategory = 0x1 << 1;
 
--(void)dealloc {
-    NSLog(@"%s - %p",__PRETTY_FUNCTION__,self);
-}
-
 - (void) didMoveToView:(SKView *)view
 {
     if (!sceneCreated)
     {
-        NSLog(@"scenecreate");
+//        NSLog(@"scenecreate");
         isJumping = FALSE;
         self.backgroundColor = [SKColor colorWithRed:254/255.0 green:209/255.0 blue:0 alpha:1];
         self.scaleMode = SKSceneScaleModeAspectFill;
@@ -182,7 +178,7 @@ static const uint32_t obstacleCategory = 0x1 << 1;
     }
     else
     {   //player won
-        NSLog(@"PLAYERWON");
+//        NSLog(@"PLAYERWON");
     }
 }
 
