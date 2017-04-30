@@ -9,6 +9,9 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "GameTwoScene.h"
-@interface GameTwoViewController : UIViewController
 
+@interface GameTwoViewController : UIViewController
+@property SKView * skView;
+
+- (void) displayAlert:(SKScene *) scene;
 @end

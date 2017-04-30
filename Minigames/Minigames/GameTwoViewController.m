@@ -9,34 +9,73 @@
 #import "GameTwoViewController.h"
 
 @implementation GameTwoViewController
-static const uint32_t playerCategory = 0x1 << 0;
-//static const uint32_t obstacleCategory = 0x1 << 1;
+@synthesize skView;
+
+-(void) viewWillAppear:(BOOL)animated
+{
+    if (!skView){
+        NSLog(@"%s - (re)creating skView",__PRETTY_FUNCTION__);
+        skView = (SKView*) self.view;
+        skView.showsFPS = TRUE;
+        skView.showsNodeCount = TRUE;
+//        [self.view addSubview:skView];
+        GameTwoScene *scene = [[GameTwoScene alloc] initWithSize:CGSizeMake(skView.bounds.size.width,
+                                                                        skView.bounds.size.height)];
+    
+        scene.viewController = self;
+    
+        [skView presentScene:scene];
+    }
+}
 -(void) viewDidLoad
 {
     [super viewDidLoad];
-    SKView * skView = (SKView*) self.view;
-    skView.showsFPS = TRUE;
-    skView.showsNodeCount = TRUE;
-    
-    SKScene *scene = [[GameTwoScene alloc] initWithSize:CGSizeMake(skView.bounds.size.width,
-                                                              skView.bounds.size.height)];
-    
-    [skView presentScene:scene];
 }
 
-
-- (void) createPlayer
+- (void) displayAlert:(GameTwoScene *) scene
 {
-    SKSpriteNode *player = [[SKSpriteNode alloc] initWithImageNamed:@"Player.png"];
-    player.position = CGPointMake(184, 530);
-    player.name = @"playerNode";
-    player.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(20, 20)];
     
-    player.physicsBody.usesPreciseCollisionDetection = TRUE;
-    player.physicsBody.categoryBitMask = playerCategory;
+    UIAlertController * alert =
+    [UIAlertController alertControllerWithTitle:@"Game Over"
+                                        message:[NSString stringWithFormat:@"Score: %ld", scene.score]
+                                 preferredStyle:UIAlertControllerStyleAlert];
     
-//    [self addCh :player];
+    UIAlertAction* restartButton = [UIAlertAction actionWithTitle:@"Restart"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action)
+    {
+        [scene restartScene];
+    }];
+    
+    
+    UIAlertAction* menuButton = [UIAlertAction actionWithTitle:@"Menu"
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction * action)
+    {
+        //go back to main menu
+        [scene removeAllActions];
+        [scene removeAllChildren];
+        
+        [self performSegueWithIdentifier:@"mainMenuSegue" sender:self];
+        
+        if (!skView)
+        {
+            NSLog(@"%s - removing skView",__PRETTY_FUNCTION__);
+            [skView removeFromSuperview];
+            [skView presentScene:nil];
+            skView = nil;
+        }
+    }];
+    
+    //Add your buttons to alert controller
+    
+    [alert addAction:restartButton];
+    [alert addAction:menuButton];
+    
+    [self presentViewController:alert animated:TRUE completion:nil];
 }
+
+
 
 
 @end

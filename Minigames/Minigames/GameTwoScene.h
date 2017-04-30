@@ -7,8 +7,13 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "GameTwoViewController.h"
+@interface GameTwoScene : SKScene <SKPhysicsContactDelegate>
+@property (nonatomic) BOOL sceneCreated;
+@property (nonatomic) BOOL isJumping;
+@property (nonatomic) NSInteger score;
+@property (weak, nonatomic) UIViewController * viewController;
 
-@interface GameTwoScene : SKScene
-@property BOOL sceneCreated;
-@property NSArray *obstacleAnimation;
+- (void) setScore;
+- (void) restartScene;
 @end
