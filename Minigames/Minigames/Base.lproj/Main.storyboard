@@ -205,193 +205,290 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptn-06-OrV" userLabel="ResetButton">
+                                <rect key="frame" x="161" y="615" width="92" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBV-8d-GdW" userLabel="MainMenuButton">
+                                <rect key="frame" x="157" y="677" width="100" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Main Menu"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="WEI-E1-iVC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDP-HX-9oz" userLabel="HighScoreLabel">
+                                <rect key="frame" x="299" y="28" width="95" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3I-27-miK">
-                                <rect key="frame" x="0.0" y="146" width="69" height="64"/>
+                                <rect key="frame" x="0.0" y="225" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button00" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ew9-3O-5cg">
-                                <rect key="frame" x="69" y="146" width="69" height="64"/>
+                                <rect key="frame" x="69" y="225" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button01" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCD-f0-OE0">
-                                <rect key="frame" x="138" y="146" width="69" height="64"/>
+                                <rect key="frame" x="138" y="225" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button02" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tG1-Gj-krX">
-                                <rect key="frame" x="207" y="146" width="69" height="64"/>
+                                <rect key="frame" x="207" y="225" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button03" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1c-Og-IEu">
-                                <rect key="frame" x="276" y="146" width="69" height="64"/>
+                                <rect key="frame" x="276" y="225" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button04" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGm-G0-H58">
-                                <rect key="frame" x="345" y="146" width="69" height="64"/>
+                                <rect key="frame" x="345" y="225" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button05" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXI-bP-uM1">
-                                <rect key="frame" x="0.0" y="210" width="69" height="64"/>
+                                <rect key="frame" x="0.0" y="289" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button10" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZz-ms-qYI">
-                                <rect key="frame" x="69" y="210" width="69" height="64"/>
+                                <rect key="frame" x="69" y="289" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button11" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnj-y2-iJa">
-                                <rect key="frame" x="138" y="210" width="69" height="64"/>
+                                <rect key="frame" x="138" y="289" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button12" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1M-Cf-ZL3">
-                                <rect key="frame" x="207" y="210" width="69" height="64"/>
+                                <rect key="frame" x="207" y="289" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button13" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C51-Xj-cYx">
-                                <rect key="frame" x="276" y="210" width="69" height="64"/>
+                                <rect key="frame" x="276" y="289" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button14" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsO-Xk-fM3">
-                                <rect key="frame" x="345" y="210" width="69" height="64"/>
+                                <rect key="frame" x="345" y="289" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button15" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTL-Sx-4xd">
-                                <rect key="frame" x="0.0" y="274" width="69" height="64"/>
+                                <rect key="frame" x="0.0" y="353" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button20" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iC-rd-W3d">
-                                <rect key="frame" x="69" y="274" width="69" height="64"/>
+                                <rect key="frame" x="69" y="353" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button21" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjE-Oh-kK7">
-                                <rect key="frame" x="138" y="274" width="69" height="64"/>
+                                <rect key="frame" x="138" y="353" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button22" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7M-sC-51N">
-                                <rect key="frame" x="207" y="274" width="69" height="64"/>
+                                <rect key="frame" x="207" y="353" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button23" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KM0-bk-rNy">
-                                <rect key="frame" x="276" y="274" width="69" height="64"/>
+                                <rect key="frame" x="276" y="353" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button24" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aS-BC-fz6">
-                                <rect key="frame" x="345" y="274" width="69" height="64"/>
+                                <rect key="frame" x="345" y="353" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button25" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdw-Ya-JPa">
-                                <rect key="frame" x="0.0" y="337" width="69" height="64"/>
+                                <rect key="frame" x="0.0" y="416" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button30" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcD-Zi-1cG">
-                                <rect key="frame" x="69" y="337" width="69" height="64"/>
+                                <rect key="frame" x="69" y="416" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button31" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ly-J3-aYx">
-                                <rect key="frame" x="138" y="337" width="69" height="64"/>
+                                <rect key="frame" x="138" y="416" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button32" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFN-ac-qkI">
-                                <rect key="frame" x="207" y="337" width="69" height="64"/>
+                                <rect key="frame" x="207" y="416" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button33" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDh-IK-LtA">
-                                <rect key="frame" x="276" y="337" width="69" height="64"/>
+                                <rect key="frame" x="276" y="416" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button34" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09B-xn-iI1">
-                                <rect key="frame" x="345" y="337" width="69" height="64"/>
+                                <rect key="frame" x="345" y="416" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button35" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5X-3J-1A2">
-                                <rect key="frame" x="0.0" y="401" width="69" height="64"/>
+                                <rect key="frame" x="0.0" y="480" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button40" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnA-CV-pa8">
-                                <rect key="frame" x="69" y="401" width="69" height="64"/>
+                                <rect key="frame" x="69" y="480" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button41" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNT-6T-iaG">
-                                <rect key="frame" x="138" y="401" width="69" height="64"/>
+                                <rect key="frame" x="138" y="480" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button42" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSW-94-LmT">
-                                <rect key="frame" x="207" y="401" width="69" height="64"/>
+                                <rect key="frame" x="207" y="480" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button43" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCg-Sp-qjD">
-                                <rect key="frame" x="276" y="401" width="69" height="64"/>
+                                <rect key="frame" x="276" y="480" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button44" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SyB-PQ-Psg">
-                                <rect key="frame" x="345" y="401" width="69" height="64"/>
+                                <rect key="frame" x="345" y="480" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button45" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggg-se-xjd">
-                                <rect key="frame" x="0.0" y="464" width="69" height="64"/>
+                                <rect key="frame" x="0.0" y="543" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button50" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7n-ye-MYD">
-                                <rect key="frame" x="69" y="464" width="69" height="64"/>
+                                <rect key="frame" x="69" y="543" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button51" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJN-wS-Zze">
-                                <rect key="frame" x="138" y="464" width="69" height="64"/>
+                                <rect key="frame" x="138" y="543" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button52" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFk-Zw-nvh">
-                                <rect key="frame" x="207" y="464" width="69" height="64"/>
+                                <rect key="frame" x="207" y="543" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button53" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mx1-YY-WDl">
-                                <rect key="frame" x="276" y="464" width="69" height="64"/>
+                                <rect key="frame" x="276" y="543" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button54" image="questionMarkCardImg.jpg"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GV-ae-7q6">
-                                <rect key="frame" x="345" y="464" width="69" height="64"/>
+                                <rect key="frame" x="345" y="543" width="69" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button55" image="questionMarkCardImg.jpg"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remaining Tries:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzk-ne-Avp" userLabel="RemainingTriesLabel">
+                                <rect key="frame" x="127" y="120" width="160" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xhH-uQ-JZY" userLabel="CurrentScoreTextfield">
+                                <rect key="frame" x="20" y="62" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Tv-Kf-nsb" userLabel="HighScoreTextfield">
+                                <rect key="frame" x="276" y="62" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DXh-h3-TlK" userLabel="RemainingTriesTextfield">
+                                <rect key="frame" x="148" y="156" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3P-TD-odm" userLabel="CurrentScoreLabel">
+                                <rect key="frame" x="20" y="28" width="126" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="CSTextField" destination="xhH-uQ-JZY" id="LaQ-uh-sYe"/>
+                        <outlet property="HSTextField" destination="1Tv-Kf-nsb" id="FIW-1D-69q"/>
+                        <outlet property="remainingTriesField" destination="DXh-h3-TlK" id="gsD-89-7hv"/>
+                        <outlet property="resetButton" destination="ptn-06-OrV" id="c2d-Kh-I5D"/>
+                        <outletCollection property="GridButtons" destination="U3I-27-miK" collectionClass="NSMutableArray" id="lMn-ew-fOI"/>
+                        <outletCollection property="GridButtons" destination="ew9-3O-5cg" collectionClass="NSMutableArray" id="M7X-Wn-3em"/>
+                        <outletCollection property="GridButtons" destination="LCD-f0-OE0" collectionClass="NSMutableArray" id="dfa-bf-8iA"/>
+                        <outletCollection property="GridButtons" destination="tG1-Gj-krX" collectionClass="NSMutableArray" id="rp5-lH-fAl"/>
+                        <outletCollection property="GridButtons" destination="L1c-Og-IEu" collectionClass="NSMutableArray" id="VOP-y8-X0i"/>
+                        <outletCollection property="GridButtons" destination="UGm-G0-H58" collectionClass="NSMutableArray" id="Yoy-25-bEi"/>
+                        <outletCollection property="GridButtons" destination="NXI-bP-uM1" collectionClass="NSMutableArray" id="Jpy-ke-Rot"/>
+                        <outletCollection property="GridButtons" destination="dZz-ms-qYI" collectionClass="NSMutableArray" id="efr-f6-ZM9"/>
+                        <outletCollection property="GridButtons" destination="Tnj-y2-iJa" collectionClass="NSMutableArray" id="Neq-Jh-hwX"/>
+                        <outletCollection property="GridButtons" destination="V1M-Cf-ZL3" collectionClass="NSMutableArray" id="MCU-tZ-95h"/>
+                        <outletCollection property="GridButtons" destination="C51-Xj-cYx" collectionClass="NSMutableArray" id="poT-OV-e4b"/>
+                        <outletCollection property="GridButtons" destination="bsO-Xk-fM3" collectionClass="NSMutableArray" id="fpV-3q-Z0k"/>
+                        <outletCollection property="GridButtons" destination="LTL-Sx-4xd" collectionClass="NSMutableArray" id="VcS-qF-SAx"/>
+                        <outletCollection property="GridButtons" destination="4iC-rd-W3d" collectionClass="NSMutableArray" id="vuh-Sv-BvA"/>
+                        <outletCollection property="GridButtons" destination="pjE-Oh-kK7" collectionClass="NSMutableArray" id="TQs-78-i63"/>
+                        <outletCollection property="GridButtons" destination="g7M-sC-51N" collectionClass="NSMutableArray" id="q00-mJ-bDp"/>
+                        <outletCollection property="GridButtons" destination="KM0-bk-rNy" collectionClass="NSMutableArray" id="BRU-de-TL0"/>
+                        <outletCollection property="GridButtons" destination="1aS-BC-fz6" collectionClass="NSMutableArray" id="wS8-F9-aLv"/>
+                        <outletCollection property="GridButtons" destination="fdw-Ya-JPa" collectionClass="NSMutableArray" id="uvv-xP-qTR"/>
+                        <outletCollection property="GridButtons" destination="AcD-Zi-1cG" collectionClass="NSMutableArray" id="myw-oi-unN"/>
+                        <outletCollection property="GridButtons" destination="9ly-J3-aYx" collectionClass="NSMutableArray" id="cFC-Ar-Vjz"/>
+                        <outletCollection property="GridButtons" destination="lFN-ac-qkI" collectionClass="NSMutableArray" id="O93-CA-hVl"/>
+                        <outletCollection property="GridButtons" destination="lDh-IK-LtA" collectionClass="NSMutableArray" id="dEz-MR-vyg"/>
+                        <outletCollection property="GridButtons" destination="09B-xn-iI1" collectionClass="NSMutableArray" id="aqc-TF-Mg9"/>
+                        <outletCollection property="GridButtons" destination="y5X-3J-1A2" collectionClass="NSMutableArray" id="ciR-eZ-Rek"/>
+                        <outletCollection property="GridButtons" destination="xnA-CV-pa8" collectionClass="NSMutableArray" id="2FF-0c-UEW"/>
+                        <outletCollection property="GridButtons" destination="vNT-6T-iaG" collectionClass="NSMutableArray" id="t4T-DY-fhb"/>
+                        <outletCollection property="GridButtons" destination="kSW-94-LmT" collectionClass="NSMutableArray" id="9xT-Sw-LF2"/>
+                        <outletCollection property="GridButtons" destination="wCg-Sp-qjD" collectionClass="NSMutableArray" id="3mk-wS-tmb"/>
+                        <outletCollection property="GridButtons" destination="SyB-PQ-Psg" collectionClass="NSMutableArray" id="12W-dC-4Th"/>
+                        <outletCollection property="GridButtons" destination="ggg-se-xjd" collectionClass="NSMutableArray" id="Ktu-c5-TVb"/>
+                        <outletCollection property="GridButtons" destination="H7n-ye-MYD" collectionClass="NSMutableArray" id="02O-62-63S"/>
+                        <outletCollection property="GridButtons" destination="xJN-wS-Zze" collectionClass="NSMutableArray" id="3gQ-hg-Bbh"/>
+                        <outletCollection property="GridButtons" destination="iFk-Zw-nvh" collectionClass="NSMutableArray" id="KJQ-76-DYy"/>
+                        <outletCollection property="GridButtons" destination="Mx1-YY-WDl" collectionClass="NSMutableArray" id="ufY-vb-9T4"/>
+                        <outletCollection property="GridButtons" destination="9GV-ae-7q6" collectionClass="NSMutableArray" id="qmY-Tj-2wR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9F-Es-81M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="901.44927536231887" y="286.95652173913044"/>
+            <point key="canvasLocation" x="902.89855072463774" y="287.77173913043481"/>
         </scene>
         <!--Game Seven View Controller-->
         <scene sceneID="uws-eK-Ett">
@@ -413,6 +510,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="questionMarkCardImg.jpg" width="627" height="878"/>
+        <image name="questionMarkCardImg.jpg" width="69" height="64"/>
     </resources>
 </document>
