@@ -54,6 +54,8 @@ UIImage *tmpImg;
 }
 
 - (void) initializeGrid{
+    [_remainingTriesField setText:@"5"];
+    numMatches = 0;
     int num2Imgs = 0;
     int num10Imgs = 0;
     int numJackImgs = 0;
@@ -175,6 +177,17 @@ UIImage *tmpImg;
             break;
     }
 }
+
+- (void) decrementTries{
+    int numTries = [[_remainingTriesField text] intValue];
+    
+    if(numTries ){
+        
+    }
+    
+}
+
+
 
 - (IBAction) matchButtonPressed:(id) sender{
     
