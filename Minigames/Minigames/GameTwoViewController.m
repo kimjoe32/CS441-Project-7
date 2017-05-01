@@ -55,7 +55,7 @@
         [scene removeAllActions];
         [scene removeAllChildren];
         
-        [self performSegueWithIdentifier:@"mainMenuSegue" sender:self];
+        [self backToMenu];
         
         if (!skView)
         {
@@ -73,4 +73,8 @@
     [self presentViewController:alert animated:TRUE completion:nil];
 }
 
+- (void) backToMenu
+{
+    [self performSegueWithIdentifier:@"mainMenuSegue" sender:self];
+}
 @end

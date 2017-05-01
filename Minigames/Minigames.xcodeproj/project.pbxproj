@@ -23,6 +23,7 @@
 		6C8C30001EB5EA72004A52FC /* Cup1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2FFD1EB5EA72004A52FC /* Cup1.png */; };
 		6C8C30011EB5EA72004A52FC /* Cup2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2FFE1EB5EA72004A52FC /* Cup2.png */; };
 		6C8C30021EB5EA72004A52FC /* Cup3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C2FFF1EB5EA72004A52FC /* Cup3.png */; };
+		6CFA7CE11EB7E76300B1019B /* MainMenuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CFA7CE01EB7E76300B1019B /* MainMenuButton.png */; };
 		C9028BC91EB5599C00047201 /* GameFourPictures in Resources */ = {isa = PBXBuildFile; fileRef = C9028BC81EB5599C00047201 /* GameFourPictures */; };
 		C9D96E5F1EB17A730011B512 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D96E5E1EB17A730011B512 /* main.m */; };
 		C9D96E621EB17A730011B512 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D96E611EB17A730011B512 /* AppDelegate.m */; };
@@ -79,6 +80,7 @@
 		6C8C2FFD1EB5EA72004A52FC /* Cup1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cup1.png; sourceTree = "<group>"; };
 		6C8C2FFE1EB5EA72004A52FC /* Cup2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cup2.png; sourceTree = "<group>"; };
 		6C8C2FFF1EB5EA72004A52FC /* Cup3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cup3.png; sourceTree = "<group>"; };
+		6CFA7CE01EB7E76300B1019B /* MainMenuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainMenuButton.png; sourceTree = "<group>"; };
 		C9028BC81EB5599C00047201 /* GameFourPictures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GameFourPictures; sourceTree = "<group>"; };
 		C9D96E5A1EB17A730011B512 /* Minigames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minigames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D96E5E1EB17A730011B512 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		6C8C2FF31EB5CA35004A52FC /* GameTwoPictures */ = {
 			isa = PBXGroup;
 			children = (
+				6CFA7CE01EB7E76300B1019B /* MainMenuButton.png */,
 				6C8C2FF41EB5CA35004A52FC /* Obs1.png */,
 				6C8C2FF51EB5CA35004A52FC /* Player1.png */,
 			);
@@ -405,6 +408,7 @@
 				C9028BC91EB5599C00047201 /* GameFourPictures in Resources */,
 				C9D96E6F1EB17A730011B512 /* Main.storyboard in Resources */,
 				C9D96E711EB17A730011B512 /* Assets.xcassets in Resources */,
+				6CFA7CE11EB7E76300B1019B /* MainMenuButton.png in Resources */,
 				C9D96E741EB17A730011B512 /* LaunchScreen.storyboard in Resources */,
 				C9D96E661EB17A730011B512 /* Actions.sks in Resources */,
 			);

@@ -167,6 +167,14 @@ static const uint32_t obstacleCategory = 0x1 << 1;
     {
         score++;
         [self setScore];
+        if (score >= 10)
+        {
+            SKSpriteNode * obstacle = (SKSpriteNode *) [self childNodeWithName:@("obstacleNode")];
+            [obstacle removeAllActions]; //stop rotating
+            //player won
+            NSLog(@"PLAYERWON");
+            [self addChild: [self backToMenuButton]];
+        }
     }
     else if (score < 10)
     {   //player lost
@@ -176,10 +184,15 @@ static const uint32_t obstacleCategory = 0x1 << 1;
         [vc displayAlert:self];
         vc = nil;
     }
-    else
-    {   //player won
-//        NSLog(@"PLAYERWON");
-    }
+}
+
+- (SKSpriteNode *) backToMenuButton
+{
+    SKSpriteNode * b = [SKSpriteNode spriteNodeWithImageNamed:@"MainMenuButton"];
+    b.position = CGPointMake(CGRectGetMidX(self.frame),CGRectGetMidY(self.frame));
+    b.name = @"menuButton";//how the node is identified later
+    b.zPosition = 1.0;
+    return b;
 }
 
 - (void) setScore
@@ -191,7 +204,21 @@ static const uint32_t obstacleCategory = 0x1 << 1;
 - (void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 
 {
-    [self playerJumped];
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInNode:self];
+    SKNode *node = [self nodeAtPoint:location];
+    
+    //if fire button touched, bring the rain
+    if ([node.name isEqualToString:@"menuButton"]) {
+        GameTwoViewController * vc = (GameTwoViewController*) viewController;
+        [vc backToMenu];
+        vc = nil;
+        viewController = nil;
+    }
+    else
+    {
+        [self playerJumped];
+    }
 }
 
 -(void) restartScene

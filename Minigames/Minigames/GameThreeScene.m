@@ -7,6 +7,7 @@
 //
 
 #import "GameThreeScene.h"
+#import <stdatomic.h>
 
 @implementation GameThreeScene
 @synthesize sceneCreated;
@@ -14,7 +15,7 @@
 @synthesize cup2;
 @synthesize cup3;
 NSTimeInterval globalTime;
-
+int completedAnimations;
 
 - (void) didMoveToView:(SKView *)view
 {
@@ -25,6 +26,7 @@ NSTimeInterval globalTime;
         [self createGameThreeScene];
         sceneCreated = TRUE;
         self.physicsWorld.gravity = CGVectorMake(0,0);
+        
     }
     globalTime = 2.0;
 }
@@ -40,13 +42,13 @@ NSTimeInterval globalTime;
     gameThreeNode.fontColor = [SKColor blackColor];
     
     gameThreeNode.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMaxY(self.frame)-gameThreeNode.frame.size.height - 10);
+                                         CGRectGetMaxY(self.frame)-gameThreeNode.frame.size.height - 10);
     
     [self addChild:gameThreeNode];
     
     cup1 = [[SKSpriteNode alloc] initWithImageNamed:@"Cup1.png"];
     cup1.position = CGPointMake(CGRectGetMidX(self.frame) - 100,
-                                        CGRectGetMidY(self.frame));
+                                CGRectGetMidY(self.frame));
     cup1.name = @"cup1";
     
     cup2 = [[SKSpriteNode alloc] initWithImageNamed:@"Cup2.png"];
@@ -64,16 +66,23 @@ NSTimeInterval globalTime;
     [self addChild:cup3];
 }
 
+//the next couple of functions look ridiculous, but remember how hard you tried and how futile it was
+
 - (SKAction *) leftUpMiddle
 {
     CGFloat xPosition = CGRectGetMidX(self.frame);
     CGFloat yPosition = CGRectGetMidY(self.frame);
     
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, NULL, CGRectGetMidX(cup1.frame), CGRectGetMidY(cup1.frame));
+    CGPathMoveToPoint(path, NULL,
+                      CGRectGetMidX(cup1.frame),
+                      CGRectGetMidY(cup1.frame));
     CGPathAddLineToPoint(path, NULL, xPosition-75, yPosition+75);
     CGPathAddLineToPoint(path, NULL, xPosition, yPosition);
-    SKAction *followline = [SKAction followPath:path asOffset:FALSE orientToPath:NO duration:globalTime];
+    SKAction *followline = [SKAction followPath:path
+                                       asOffset:FALSE
+                                   orientToPath:NO
+                                       duration:globalTime];
     CGPathRelease(path);
     return followline;
 }
@@ -84,10 +93,15 @@ NSTimeInterval globalTime;
     CGFloat yPosition = CGRectGetMidY(self.frame);
     
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, NULL, CGRectGetMidX(cup2.frame), CGRectGetMidY(cup2.frame));
+    CGPathMoveToPoint(path, NULL,
+                      CGRectGetMidX(cup2.frame),
+                      CGRectGetMidY(cup2.frame));
     CGPathAddLineToPoint(path, NULL, xPosition-75, yPosition-75);
     CGPathAddLineToPoint(path, NULL, xPosition-100, yPosition);
-    SKAction *followline = [SKAction followPath:path asOffset:FALSE orientToPath:NO duration:globalTime];
+    SKAction *followline = [SKAction followPath:path
+                                       asOffset:FALSE
+                                   orientToPath:NO
+                                       duration:globalTime];
     CGPathRelease(path);
     return followline;
 }
@@ -98,11 +112,16 @@ NSTimeInterval globalTime;
     CGFloat yPosition = CGRectGetMidY(self.frame);
     
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, NULL, CGRectGetMidX(cup1.frame), CGRectGetMidY(cup1.frame));
+    CGPathMoveToPoint(path, NULL,
+                      CGRectGetMidX(cup1.frame),
+                      CGRectGetMidY(cup1.frame));
     CGPathAddLineToPoint(path, NULL, xPosition-75, yPosition+75);
     CGPathAddLineToPoint(path, NULL, xPosition+75, yPosition+75);
     CGPathAddLineToPoint(path, NULL, xPosition+100, yPosition);
-    SKAction *followline = [SKAction followPath:path asOffset:FALSE orientToPath:NO duration:globalTime];
+    SKAction *followline = [SKAction followPath:path
+                                       asOffset:FALSE
+                                   orientToPath:NO
+                                       duration:globalTime];
     CGPathRelease(path);
     return followline;
 }
@@ -113,11 +132,16 @@ NSTimeInterval globalTime;
     CGFloat yPosition = CGRectGetMidY(self.frame);
     
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, NULL, CGRectGetMidX(cup3.frame), CGRectGetMidY(cup3.frame));
+    CGPathMoveToPoint(path, NULL,
+                      CGRectGetMidX(cup3.frame),
+                      CGRectGetMidY(cup3.frame));
     CGPathAddLineToPoint(path, NULL, xPosition+75, yPosition-75);
     CGPathAddLineToPoint(path, NULL, xPosition-75, yPosition-75);
     CGPathAddLineToPoint(path, NULL, xPosition-100, yPosition);
-    SKAction *followline = [SKAction followPath:path asOffset:FALSE orientToPath:NO duration:globalTime];
+    SKAction *followline = [SKAction followPath:path
+                                       asOffset:FALSE
+                                   orientToPath:NO
+                                       duration:globalTime];
     CGPathRelease(path);
     return followline;
 }
@@ -128,10 +152,15 @@ NSTimeInterval globalTime;
     CGFloat yPosition = CGRectGetMidY(self.frame);
     
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, NULL, CGRectGetMidX(cup2.frame), CGRectGetMidY(cup2.frame));
+    CGPathMoveToPoint(path, NULL,
+                      CGRectGetMidX(cup2.frame),
+                      CGRectGetMidY(cup2.frame));
     CGPathAddLineToPoint(path, NULL, xPosition+75, yPosition+75);
     CGPathAddLineToPoint(path, NULL, xPosition+100, yPosition);
-    SKAction *followline = [SKAction followPath:path asOffset:FALSE orientToPath:NO duration:globalTime];
+    SKAction *followline = [SKAction followPath:path
+                                       asOffset:FALSE
+                                   orientToPath:NO
+                                       duration:globalTime];
     CGPathRelease(path);
     return followline;
 }
@@ -142,10 +171,15 @@ NSTimeInterval globalTime;
     CGFloat yPosition = CGRectGetMidY(self.frame);
     
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, NULL, CGRectGetMidX(cup3.frame), CGRectGetMidY(cup3.frame));
+    CGPathMoveToPoint(path, NULL,
+                      CGRectGetMidX(cup3.frame),
+                      CGRectGetMidY(cup3.frame));
     CGPathAddLineToPoint(path, NULL, xPosition+75, yPosition-75);
     CGPathAddLineToPoint(path, NULL, xPosition, yPosition);
-    SKAction *followline = [SKAction followPath:path asOffset:FALSE orientToPath:NO duration:globalTime];
+    SKAction *followline = [SKAction followPath:path
+                                       asOffset:FALSE
+                                   orientToPath:NO
+                                       duration:globalTime];
     CGPathRelease(path);
     return followline;
 }
@@ -156,10 +190,15 @@ NSTimeInterval globalTime;
     CGFloat yPosition = CGRectGetMidY(self.frame);
     
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, NULL, CGRectGetMidX(cup2.frame), CGRectGetMidY(cup2.frame));
+    CGPathMoveToPoint(path, NULL,
+                      CGRectGetMidX(cup2.frame),
+                      CGRectGetMidY(cup2.frame));
     CGPathAddLineToPoint(path, NULL, xPosition+75, yPosition-75);
     CGPathAddLineToPoint(path, NULL, xPosition+100, yPosition);
-    SKAction *followline = [SKAction followPath:path asOffset:FALSE orientToPath:NO duration:globalTime];
+    SKAction *followline = [SKAction followPath:path
+                                       asOffset:FALSE
+                                   orientToPath:NO
+                                       duration:globalTime];
     CGPathRelease(path);
     return followline;
 }
@@ -170,10 +209,15 @@ NSTimeInterval globalTime;
     CGFloat yPosition = CGRectGetMidY(self.frame);
     
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, NULL, CGRectGetMidX(cup3.frame), CGRectGetMidY(cup3.frame));
+    CGPathMoveToPoint(path, NULL,
+                      CGRectGetMidX(cup3.frame),
+                      CGRectGetMidY(cup3.frame));
     CGPathAddLineToPoint(path, NULL, xPosition+75, yPosition+75);
     CGPathAddLineToPoint(path, NULL, xPosition, yPosition);
-    SKAction *followline = [SKAction followPath:path asOffset:FALSE orientToPath:NO duration:globalTime];
+    SKAction *followline = [SKAction followPath:path
+                                       asOffset:FALSE
+                                   orientToPath:NO
+                                       duration:globalTime];
     CGPathRelease(path);
     return followline;
 }
@@ -184,11 +228,16 @@ NSTimeInterval globalTime;
     CGFloat yPosition = CGRectGetMidY(self.frame);
     
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, NULL, CGRectGetMidX(cup1.frame), CGRectGetMidY(cup1.frame));
+    CGPathMoveToPoint(path, NULL,
+                      CGRectGetMidX(cup1.frame),
+                      CGRectGetMidY(cup1.frame));
     CGPathAddLineToPoint(path, NULL, xPosition-75, yPosition-75);
     CGPathAddLineToPoint(path, NULL, xPosition+75, yPosition-75);
     CGPathAddLineToPoint(path, NULL, xPosition+100, yPosition);
-    SKAction *followline = [SKAction followPath:path asOffset:FALSE orientToPath:NO duration:globalTime];
+    SKAction *followline = [SKAction followPath:path
+                                       asOffset:FALSE
+                                   orientToPath:NO
+                                       duration:globalTime];
     CGPathRelease(path);
     return followline;
 }
@@ -199,11 +248,14 @@ NSTimeInterval globalTime;
     CGFloat yPosition = CGRectGetMidY(self.frame);
     
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, NULL, CGRectGetMidX(cup3.frame), CGRectGetMidY(cup3.frame));
+    CGPathMoveToPoint(path, NULL,
+                      CGRectGetMidX(cup3.frame),
+                      CGRectGetMidY(cup3.frame));
     CGPathAddLineToPoint(path, NULL, xPosition+75, yPosition+75);
     CGPathAddLineToPoint(path, NULL, xPosition-75, yPosition+75);
     CGPathAddLineToPoint(path, NULL, xPosition-100, yPosition);
-    SKAction *followline = [SKAction followPath:path asOffset:FALSE orientToPath:NO duration:1.5];
+    SKAction *followline = [SKAction followPath:path
+                                       asOffset:FALSE orientToPath:NO duration:globalTime];
     CGPathRelease(path);
     return followline;
 }
@@ -214,10 +266,15 @@ NSTimeInterval globalTime;
     CGFloat yPosition = CGRectGetMidY(self.frame);
     
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, NULL, CGRectGetMidX(cup1.frame), CGRectGetMidY(cup1.frame));
+    CGPathMoveToPoint(path, NULL,
+                      CGRectGetMidX(cup1.frame),
+                      CGRectGetMidY(cup1.frame));
     CGPathAddLineToPoint(path, NULL, xPosition-75, yPosition-75);
     CGPathAddLineToPoint(path, NULL, xPosition, yPosition);
-    SKAction *followline = [SKAction followPath:path asOffset:FALSE orientToPath:NO duration:1.5];
+    SKAction *followline = [SKAction followPath:path
+                                       asOffset:FALSE
+                                   orientToPath:NO
+                                       duration:globalTime];
     CGPathRelease(path);
     return followline;
 }
@@ -228,20 +285,35 @@ NSTimeInterval globalTime;
     CGFloat yPosition = CGRectGetMidY(self.frame);
     
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, NULL, CGRectGetMidX(cup2.frame), CGRectGetMidY(cup2.frame));
+    CGPathMoveToPoint(path, NULL,
+                      CGRectGetMidX(cup2.frame),
+                      CGRectGetMidY(cup2.frame));
     CGPathAddLineToPoint(path, NULL, xPosition-75, yPosition+75);
     CGPathAddLineToPoint(path, NULL, xPosition-100, yPosition);
-    SKAction *followline = [SKAction followPath:path asOffset:FALSE orientToPath:NO duration:1.5];
+    SKAction *followline = [SKAction followPath:path
+                                       asOffset:FALSE
+                                   orientToPath:NO
+                                       duration:globalTime];
     CGPathRelease(path);
     return followline;
 }
-
 
 -(void) swap: (SKSpriteNode *) sk1 sk2: (SKSpriteNode*) sk2
 {
     CGPoint temp = sk1.position;
     sk1.position = sk2.position;
     sk2.position = temp;
+    
+    if ([sk1.name isEqualToString: @"c"])
+    {
+        sk2.name = @"c";
+        sk1.name = @"";
+    }
+    else if ([sk2.name isEqualToString: @"c"])
+    {
+        sk1.name = @"c";
+        sk2.name = @"";
+    }
 }
 
 - (void) resetCups
@@ -260,63 +332,149 @@ NSTimeInterval globalTime;
         [self swap:cup3 sk2:cup1];
     if (CGRectGetMidX(cup2.frame) > CGRectGetMidX(self.frame))
         [self swap:cup3 sk2:cup2];
+    
+    CGPoint pos = cup1.position;
+    pos = CGPointMake( CGRectGetMidX(self.frame) - 100, CGRectGetMidY(self.frame));
+    cup1.position = pos;
+    
+    pos = cup2.position;
+    pos = CGPointMake( CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+    cup2.position = pos;
+    
+    pos = cup3.position;
+    pos = CGPointMake( CGRectGetMidX(self.frame) + 100, CGRectGetMidY(self.frame));
+    cup3.position = pos;
 }
 
 - (void) doRandomSwap
 {
-    [self resetCups];
-    
-    switch (arc4random_uniform(5))
+    NSMutableArray *cup1Sequence = [[NSMutableArray alloc] init];
+    NSMutableArray *cup2Sequence = [[NSMutableArray alloc] init];
+    NSMutableArray *cup3Sequence = [[NSMutableArray alloc] init];
+    for (int i =0; i < 10; i++)
     {
-        default://swap 1 and 2
-            NSLog(@"swap 1 and 2");
-            [cup1 runAction:[self leftUpMiddle]];
-            
-            [cup2 runAction:[self middleDownLeft]];
-            break;
-            
-        case 1: //swap 1 and 3
-            NSLog(@"swap 1 and 3");
-            [cup1 runAction:[self leftUpRight]];
-            
-            [cup3 runAction:[self rightDownLeft]];
-            break;
-            
-        case 2://swap 2 and 3
-            NSLog(@"swap 2 and 3");
-            [cup2 runAction:[self middleUpRight]];
-            
-            [cup3 runAction:[self rightDownMiddle]];
-            break;
-            
-        case 3://swap 2 and 3 alternate
-            NSLog(@"swap 2 and 3 alternate");
-            [cup2 runAction:[self middleDownRight]];
-            
-            [cup3 runAction:[self rightUpMiddle]];
-            
-            break;
-            
-        case 4://swap 1 and 3 alternate
-            NSLog(@"swap 1 and 3 alternate");
-            [cup1 runAction:[self leftDownRight]];
-            
-            [cup3 runAction:[self rightUpLeft]];
-            break;
-            
-        case 5://swap 1 and 2 alternate
-            NSLog(@"swap 1 and 2 alternate");
-            [cup1 runAction:[self leftDownMiddle]];
-            
-            [cup2 runAction:[self middleUpLeft]];
-            break;
+        switch (arc4random_uniform(5))
+        {
+            default://swap 1 and 2
+            {
+//                NSLog(@"swap 1 and 2");
+                [cup1Sequence addObject:[self leftUpMiddle]];
+                [cup2Sequence addObject:[self middleDownLeft]];
+                
+                [cup3Sequence addObject:[SKAction waitForDuration:globalTime]];
+                break;
+            }
+            case 1: //swap 1 and 3
+            {
+//                NSLog(@"swap 1 and 3");
+                [cup1Sequence addObject:[self leftUpRight]];
+                [cup3Sequence addObject:[self rightDownLeft]];
+                
+                [cup2Sequence addObject:[SKAction waitForDuration:globalTime]];
+                break;
+            }
+            case 2://swap 2 and 3
+            {
+//                NSLog(@"swap 2 and 3");
+                [cup2Sequence addObject:[self middleUpRight]];
+                [cup3Sequence addObject:[self rightDownMiddle]];
+                
+                [cup1Sequence addObject:[SKAction waitForDuration:globalTime]];
+                break;
+            }
+            case 3://swap 2 and 3 alternate
+            {
+//                NSLog(@"swap 2 and 3 alt");
+                [cup2Sequence addObject:[self middleDownRight]];
+                [cup3Sequence addObject:[self rightUpMiddle]];
+                
+                [cup1Sequence addObject:[SKAction waitForDuration:globalTime]];
+                break;
+            }
+            case 4://swap 1 and 3 alternate
+            {
+//                NSLog(@"swap 1 and 3 alt");
+                [cup1Sequence addObject:[self leftDownRight]];
+                [cup3Sequence addObject:[self rightUpLeft]];
+                
+                [cup2Sequence addObject:[SKAction waitForDuration:globalTime]];
+                break;
+            }
+            case 5://swap 1 and 2 alternate
+            {
+//                NSLog(@"swap 1 and 2 alt");
+                [cup1Sequence addObject:[self leftDownMiddle]];
+                [cup2Sequence addObject:[self middleUpLeft]];
+                
+                [cup3Sequence addObject:[SKAction waitForDuration:globalTime]];
+                break;
+            }
+        }
+    }
+    
+    NSMutableArray * seq =[[NSMutableArray alloc] init];
+    
+    for (int i =0; i < 10; i++)
+    {
+        SKAction * set =
+        [SKAction group:@[
+                                            [SKAction runBlock:^{
+                                                [cup1 runAction:[cup1Sequence objectAtIndex:i]
+                                                     completion:^{
+                                                         completedAnimations++;
+                                                         [self finishedAnimations];
+                                                     }];
+                                            }],
+                                            [SKAction runBlock:^{
+                                                [cup2 runAction:[cup2Sequence objectAtIndex:i]
+                                                     completion:^{
+                                                         completedAnimations++;
+                                                         [self finishedAnimations];
+                                                     }];
+                                            }],
+                                            [SKAction runBlock:^{
+                                                [cup3 runAction:[cup3Sequence objectAtIndex:i]
+                                                     completion:^{
+                                                         completedAnimations++;
+                                                         [self finishedAnimations];
+                                                     }];
+                                            }]
+                                            ]];
+        [seq addObject:set];
+    }
+    SKAction *s = [SKAction sequence: @[[seq objectAtIndex:0],
+                                        [seq objectAtIndex:1],
+                                        [seq objectAtIndex:2],
+                                        [seq objectAtIndex:3],
+                                        [seq objectAtIndex:4],
+                                        [seq objectAtIndex:5],
+                                        [seq objectAtIndex:6],
+                                        [seq objectAtIndex:7],
+                                        [seq objectAtIndex:8],
+                                        [seq objectAtIndex:9]]];
+    [self runAction:s completion:^{
+        [self setUserInteractionEnabled:TRUE];
+    }];
+}
+
+- (void) finishedAnimations
+{
+    if (completedAnimations >= 3)
+    {
+        [self resetCups];
+        completedAnimations = 0;
     }
 }
 
-- (void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-
+- (void) startShuffling
 {
     [self doRandomSwap];
+}
+
+- (void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self setUserInteractionEnabled:FALSE];
+    [self startShuffling];
 }
 
 -(void) restartScene
