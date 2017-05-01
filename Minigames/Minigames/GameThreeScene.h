@@ -11,8 +11,5 @@
 @interface GameThreeScene : SKScene 
 @property (weak, nonatomic) UIViewController * viewController;
 @property (nonatomic) BOOL sceneCreated;
-@property (nonatomic) SKSpriteNode * cup1;
-@property (nonatomic) SKSpriteNode * cup2;
-@property (nonatomic) SKSpriteNode * cup3;
 - (void) restartScene;
 @end
