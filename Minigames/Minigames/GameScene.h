@@ -9,5 +9,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface GameScene : SKScene
+@property(weak,nonatomic) UIViewController* viewController;
 
 @end

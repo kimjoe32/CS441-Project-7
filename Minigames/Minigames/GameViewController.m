@@ -14,13 +14,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    SKView * skView = (SKView*) self.view;
+    skView.showsFPS = TRUE;
+    skView.showsNodeCount = TRUE;
+    
+    
+    
+    GameScene *scene = [[GameScene alloc] initWithSize:CGSizeMake(skView.bounds.size.width,
+                                                                     skView.bounds.size.height)];
+    
+    scene.viewController = self;
+    [skView presentScene:scene];
+    
     
    
 
 
 }
-- (IBAction)LoadGameOne:(id)sender {
+/*- (IBAction)LoadGameOne:(id)sender {
   [self performSegueWithIdentifier:@"GameOneSegue" sender:nil];
 }
 - (IBAction)LoadGameTwo:(id)sender {
@@ -41,7 +53,7 @@
 - (IBAction)LoadGameSeven:(id)sender {
     
     [self performSegueWithIdentifier:@"GameSevenSegue" sender:nil];
-}
+}*/
 
 - (BOOL)shouldAutorotate {
     return YES;

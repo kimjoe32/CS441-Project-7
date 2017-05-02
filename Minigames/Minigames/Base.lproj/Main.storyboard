@@ -20,75 +20,9 @@
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfE-V7-awB">
-                                <rect key="frame" x="16" y="318" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Game 1"/>
-                                <connections>
-                                    <action selector="LoadGameOne:" destination="BV1-FR-VrT" eventType="touchUpInside" id="zSZ-1A-9je"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgO-27-haJ">
-                                <rect key="frame" x="130" y="318" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Game 2"/>
-                                <connections>
-                                    <action selector="LoadGameTwo:" destination="BV1-FR-VrT" eventType="touchUpInside" id="KbJ-ne-YZx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaL-Uy-EOP">
-                                <rect key="frame" x="244" y="318" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Game 3"/>
-                                <connections>
-                                    <action selector="LoadGameThree:" destination="BV1-FR-VrT" eventType="touchUpInside" id="qIN-vC-sWy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17K-gU-Xcn">
-                                <rect key="frame" x="16" y="385" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Game 4"/>
-                                <connections>
-                                    <action selector="LoadGameFour:" destination="BV1-FR-VrT" eventType="touchUpInside" id="FvT-r2-Rdf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gug-Xt-HZY">
-                                <rect key="frame" x="130" y="385" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Game 5"/>
-                                <connections>
-                                    <action selector="LoadGameFive:" destination="BV1-FR-VrT" eventType="touchUpInside" id="rSi-BQ-0CK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V40-OD-VRb">
-                                <rect key="frame" x="244" y="385" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Game 6"/>
-                                <connections>
-                                    <action selector="LoadGameSix:" destination="BV1-FR-VrT" eventType="touchUpInside" id="NZr-Zf-aUF"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MiniGames" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wj1-lz-cts">
-                                <rect key="frame" x="43" y="48" width="288" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyr-D6-jNc">
-                                <rect key="frame" x="16" y="447" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Game 7"/>
-                                <connections>
-                                    <action selector="LoadGameSeven:" destination="BV1-FR-VrT" eventType="touchUpInside" id="yXL-tg-sFu"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="LoadGameOne" destination="EfE-V7-awB" id="Jd6-rV-pmg"/>
                         <segue destination="AnI-T0-S1X" kind="show" identifier="GameOneSegue" id="TGA-OP-jLZ"/>
                         <segue destination="pNE-NF-7eO" kind="show" identifier="GameTwoSegue" id="meZ-s3-oIA"/>
                         <segue destination="hzc-Za-Eml" kind="show" identifier="GameThreeSegue" id="46m-F8-EfR"/>
