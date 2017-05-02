@@ -8,7 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "GameOverScene.h"
-@interface FirstGameScene : SKScene
+@interface FirstGameScene : SKScene<SKPhysicsContactDelegate>
 @property(weak,nonatomic) UIViewController* viewController;
 
 @end

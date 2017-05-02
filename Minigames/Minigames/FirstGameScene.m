@@ -41,7 +41,7 @@ static const uint32_t spikeCategory = 0x1 << 1;
     index = 0;
     x = 1;
     stupidCollisionCounter = 0;
-    self.physicsWorld.contactDelegate = self;
+    //self.physicsWorld.contactDelegate = self;
     self.physicsWorld.gravity = CGVectorMake(0.0,-2.0);
     
    /* dodged = [[SKLabelNode alloc] init];
@@ -146,9 +146,9 @@ static const uint32_t spikeCategory = 0x1 << 1;
         UITouch *touch = (UITouch *)[touchesArray objectAtIndex:i];
         CGPoint point = [touch locationInView:nil];
         
-        if(point.x > 225)
+        if(point.x > 212)
         {
-            CGPoint newPos = CGPointMake(player.position.x, player.position.y+40);
+            //CGPoint newPos = CGPointMake(player.position.x, player.position.y+40);
            // [player runAction:jump];
             //player.position = newPos;
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -158,7 +158,7 @@ static const uint32_t spikeCategory = 0x1 << 1;
         }
         else
         {
-            CGPoint newPos = CGPointMake(player.position.x, player.position.y+40);
+            //CGPoint newPos = CGPointMake(player.position.x, player.position.y+40);
             //[player runAction:jump];
             //player.position = newPos;
             
