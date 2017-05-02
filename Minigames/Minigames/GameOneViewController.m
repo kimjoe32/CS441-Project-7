@@ -9,4 +9,25 @@
 #import "GameOneViewController.h"
 
 @implementation GameOneViewController
+
+
+-(void) viewDidLoad
+{
+    SKView * skView = (SKView*) self.view;
+    skView.showsFPS = TRUE;
+    skView.showsNodeCount = TRUE;
+    
+    
+    
+    FirstGameScene *scene = [[FirstGameScene alloc] initWithSize:CGSizeMake(skView.bounds.size.width,
+                                                                   skView.bounds.size.height)];
+      NSLog(@"%@",scene);
+    scene.viewController = self;
+    [skView presentScene:scene];
+    
+    
+    
+}
+
+
 @end

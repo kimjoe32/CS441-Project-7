@@ -1,5 +1,5 @@
 //
-//  GameOneViewController.h
+//  FirstGameScene.h
 //  Minigames
 //
 //  Created by Nicholas Ryan Seney on 4/29/17.
@@ -7,8 +7,8 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "FirstGameScene.h"
-
-@interface GameOneViewController : UIViewController
+#import "GameOverScene.h"
+@interface FirstGameScene : SKScene
+@property(weak,nonatomic) UIViewController* viewController;
 
 @end
