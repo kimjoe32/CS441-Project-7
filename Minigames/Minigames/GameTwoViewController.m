@@ -75,6 +75,6 @@
 
 - (void) backToMenu
 {
-    [self performSegueWithIdentifier:@"mainMenuSegue" sender:self];
+    [self performSegueWithIdentifier:@"gameTwoToMainMenuSegue" sender:self];
 }
 @end

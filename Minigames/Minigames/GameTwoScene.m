@@ -15,6 +15,7 @@
 @synthesize viewController;
 SKSpriteNode* obstacleNode;
 SKSpriteNode* playerNode;
+SKSpriteNode* menuButton;
 float globalTime;
 static const uint32_t playerCategory = 0x1 << 0;
 static const uint32_t obstacleCategory = 0x1 << 1;
@@ -31,6 +32,7 @@ static const uint32_t obstacleCategory = 0x1 << 1;
         sceneCreated = TRUE;
         self.physicsWorld.gravity = CGVectorMake(0,0);
         self.physicsWorld.contactDelegate = self;
+        [self backToMenuButton];
     }
     [self initObjects];
 }
@@ -69,13 +71,25 @@ static const uint32_t obstacleCategory = 0x1 << 1;
     if (obstacleNode == nil)
     {
         obstacleNode = [self createObstacleNode];
-        [self addChild:obstacleNode];
     }
     //make player node
     if (playerNode == nil)
     {
         playerNode = [self createPlayerNode];
+    }
+    
+    if (obstacleNode.parent == nil)
+    {
+        [self addChild:obstacleNode];
+        if (![obstacleNode hasActions])
+            [obstacleNode removeAllActions];
+        
+    }
+    if (playerNode.parent == nil)
+    {
         [self addChild:playerNode];
+        if ([playerNode hasActions])
+            [playerNode removeAllActions];
     }
 }
 
@@ -105,7 +119,7 @@ static const uint32_t obstacleCategory = 0x1 << 1;
 {
     //animate it to rotate
     SKAction * anim = [SKAction repeatActionForever:
-                    [SKAction rotateByAngle:-M_PI  duration:5 - globalTime]];
+                    [SKAction rotateByAngle:-M_PI  duration:4.5 - globalTime]];
     [obstacleNode runAction:anim];
 }
 
@@ -135,8 +149,8 @@ static const uint32_t obstacleCategory = 0x1 << 1;
     
     if (playerNode != nil)
     {
-        SKAction * anim =[SKAction sequence:@[ [SKAction scaleBy:.4 duration:.6],
-                                               [SKAction scaleBy:2.5 duration:.6]]];
+        SKAction * anim =[SKAction sequence:@[ [SKAction scaleBy:.4 duration:.5],
+                                               [SKAction scaleBy:2.5 duration:.5]]];
         //isJumping for disabling collision
         [playerNode runAction:anim
                    completion:^
@@ -149,21 +163,6 @@ static const uint32_t obstacleCategory = 0x1 << 1;
 
 - (void) didBeginContact: (SKPhysicsContact *)contact
 {
-    //playerCategory = 0x1 << 0;
-    //obstacleCategory = 0x1 << 1;
-    SKPhysicsBody *playerBody, *obstacleBody;
-    
-    if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask)
-    {
-        playerBody = contact.bodyA;
-        obstacleBody = contact.bodyB;
-    }
-    else
-    {
-        obstacleBody = contact.bodyB;
-        playerBody = contact.bodyA;
-    }
-    
     if (isJumping)
     {
         score++;
@@ -171,9 +170,10 @@ static const uint32_t obstacleCategory = 0x1 << 1;
         if (score >= 10)
         {
             [obstacleNode removeAllActions]; //stop rotating
+            menuButton.position = CGPointMake(CGRectGetMidX(self.frame),CGRectGetMidY(self.frame));
             //player won
             NSLog(@"WIN");
-            [self addChild: [self backToMenuButton]];
+            return;
         }
         globalTime += 0.20;
         [obstacleNode removeAllActions]; //stop rotating
@@ -188,13 +188,16 @@ static const uint32_t obstacleCategory = 0x1 << 1;
     }
 }
 
-- (SKSpriteNode *) backToMenuButton
+- (void) backToMenuButton
 {
-    SKSpriteNode * b = [SKSpriteNode spriteNodeWithImageNamed:@"MainMenuButton"];
-    b.position = CGPointMake(CGRectGetMidX(self.frame),CGRectGetMidY(self.frame));
-    b.name = @"menuButton";//how the node is identified later
-    b.zPosition = 1.0;
-    return b;
+    if (menuButton == nil)
+    {
+        menuButton = [SKSpriteNode spriteNodeWithImageNamed:@"MainMenuButton"];
+        menuButton.position = CGPointMake(CGRectGetMidX(self.frame),CGRectGetMidY(self.frame) - 225);
+        menuButton.name = @"menuButton";//how the node is identified later
+        menuButton.zPosition = 1.0;
+    }
+    [self addChild:menuButton];
 }
 
 - (void) setScore
@@ -216,7 +219,9 @@ static const uint32_t obstacleCategory = 0x1 << 1;
         [vc backToMenu];
         vc = nil;
         viewController = nil;
+        [obstacleNode removeAllActions];
         [self removeAllChildren];
+        [self removeAllActions];
     }
     else
     {
@@ -234,6 +239,7 @@ static const uint32_t obstacleCategory = 0x1 << 1;
     isJumping = FALSE;
     obstacleNode.zRotation = 0;
     [self animateObstacle];
+    menuButton.position = CGPointMake(CGRectGetMidX(self.frame),CGRectGetMidY(self.frame) - 225);
 }
 
 

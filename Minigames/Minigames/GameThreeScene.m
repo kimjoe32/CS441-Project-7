@@ -33,6 +33,7 @@ NSMutableArray * obstacleArray;
         self.physicsWorld.gravity = CGVectorMake(0,0);
         self.physicsWorld.contactDelegate = self;
     }
+    if (player != nil) player.position = CGPointMake(135,CGRectGetMaxY(self.frame) - 693);
 }
 
 -(id)initWithSize:(CGSize)size {
@@ -87,27 +88,13 @@ NSMutableArray * obstacleArray;
         player.physicsBody.contactTestBitMask = obstacleCategory;
         player.physicsBody.collisionBitMask = 0;
         
-        player.position = CGPointMake(135,
-                                          CGRectGetMaxY(self.frame) - 693);
+        player.position = CGPointMake(135,CGRectGetMaxY(self.frame) - 693);
     }
     [self addChild:player];
 }
 
 - (void) didBeginContact: (SKPhysicsContact *)contact
 {
-    //playerCategory = 0x1 << 0;
-    //obstacleCategory = 0x1 << 1;
-//    SKPhysicsBody *playerBody, *obstacleBody;
-//    if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask)
-//    {
-//        playerBody = contact.bodyA;
-//        obstacleBody = contact.bodyB;
-//    }
-//    else
-//    {
-//        obstacleBody = contact.bodyB;
-//        playerBody = contact.bodyA;
-//    }
     GameThreeViewController * vc = (GameThreeViewController*) _viewController;
     [vc displayAlert:self];
     for (int i =0; i < 31; i++)
@@ -159,6 +146,8 @@ NSMutableArray * obstacleArray;
     if ([node.name isEqualToString:@"menuButton"])
     {
         GameThreeViewController * vc = (GameThreeViewController*) _viewController;
+        [self removeAllActions];
+        [self removeAllChildren];
         [vc backToMenu];
         vc = nil;
         _viewController = nil;

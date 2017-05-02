@@ -57,14 +57,13 @@
                                      [scene removeAllActions];
                                      [scene removeAllChildren];
                                      
-                                     [self performSegueWithIdentifier:@"mainMenuSegue" sender:self];
-                                     
                                      if (!skView)
                                      {
                                          [skView removeFromSuperview];
                                          [skView presentScene:nil];
                                          skView = nil;
                                      }
+                                     [self backToMenu];
                                  }];
     
     //Add your buttons to alert controller
@@ -77,7 +76,7 @@
 
 - (void) backToMenu
 {
-    [self performSegueWithIdentifier:@"mainMenuSegue" sender:self];
+    [self performSegueWithIdentifier:@"game3ToMainMenuSegue" sender:self];
 }
 
 - (void)didReceiveMemoryWarning {
