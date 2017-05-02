@@ -75,6 +75,11 @@
     [self presentViewController:alert animated:TRUE completion:nil];
 }
 
+- (void) backToMenu
+{
+    [self performSegueWithIdentifier:@"mainMenuSegue" sender:self];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

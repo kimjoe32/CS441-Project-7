@@ -13,4 +13,5 @@
 @property SKView * skView;
 
 - (void) displayAlert:(SKScene *) scene;
+- (void) backToMenu;
 @end

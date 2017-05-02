@@ -13,7 +13,9 @@
 @synthesize sceneCreated;
 @synthesize isJumping;
 @synthesize viewController;
-
+SKSpriteNode* obstacleNode;
+SKSpriteNode* playerNode;
+float globalTime;
 static const uint32_t playerCategory = 0x1 << 0;
 static const uint32_t obstacleCategory = 0x1 << 1;
 
@@ -21,16 +23,16 @@ static const uint32_t obstacleCategory = 0x1 << 1;
 {
     if (!sceneCreated)
     {
-//        NSLog(@"scenecreate");
+        globalTime = 0;
         isJumping = FALSE;
         self.backgroundColor = [SKColor colorWithRed:254/255.0 green:209/255.0 blue:0 alpha:1];
         self.scaleMode = SKSceneScaleModeAspectFill;
-        [self initObjects];
         [self createGameTwoScene];
         sceneCreated = TRUE;
         self.physicsWorld.gravity = CGVectorMake(0,0);
         self.physicsWorld.contactDelegate = self;
     }
+    [self initObjects];
 }
 
 - (void) createGameTwoScene
@@ -64,18 +66,22 @@ static const uint32_t obstacleCategory = 0x1 << 1;
 - (void) initObjects
 {
     //make obstacle node
-    SKSpriteNode* obstacleNode = [self createObstacleNode];
-    [self addChild:obstacleNode];
-    
+    if (obstacleNode == nil)
+    {
+        obstacleNode = [self createObstacleNode];
+        [self addChild:obstacleNode];
+    }
     //make player node
-    SKSpriteNode* playerNode = [self createPlayerNode];
-    [self addChild:playerNode];
+    if (playerNode == nil)
+    {
+        playerNode = [self createPlayerNode];
+        [self addChild:playerNode];
+    }
 }
 
 -(SKSpriteNode*) createObstacleNode
 {
-    SKSpriteNode* obstacleNode =
-    [[SKSpriteNode alloc] initWithImageNamed:@"Obs1.png"];
+    obstacleNode=[[SKSpriteNode alloc] initWithImageNamed:@"Obs1.png"];
     obstacleNode.position = CGPointMake(CGRectGetMidX(self.frame),
                                         CGRectGetMidY(self.frame));
     
@@ -91,26 +97,21 @@ static const uint32_t obstacleCategory = 0x1 << 1;
     obstacleNode.physicsBody.collisionBitMask = 0;
     obstacleNode.physicsBody.usesPreciseCollisionDetection = TRUE;
     
-    [self animateObstacle:obstacleNode];
+    [self animateObstacle];
     return obstacleNode;
 }
 
--(void) animateObstacle: (SKSpriteNode*) obs
+-(void) animateObstacle
 {
-    if (obs == nil)
-    {
-        obs = (SKSpriteNode*) [SKNode nodeWithFileNamed:@"obstacleNod"];
-    }
     //animate it to rotate
     SKAction * anim = [SKAction repeatActionForever:
-                    [SKAction rotateByAngle:-M_PI/12  duration:.5]];
-    [obs runAction:anim];
+                    [SKAction rotateByAngle:-M_PI  duration:5 - globalTime]];
+    [obstacleNode runAction:anim];
 }
 
 -(SKSpriteNode*) createPlayerNode
 {
-    SKSpriteNode* playerNode =
-    [[SKSpriteNode alloc] initWithImageNamed:@"Player1.png"];
+    playerNode=[[SKSpriteNode alloc] initWithImageNamed:@"Player1.png"];
     
     playerNode.position = CGPointMake(CGRectGetMidX(self.frame),
                                         CGRectGetMidY(self.frame) + 100);
@@ -130,7 +131,6 @@ static const uint32_t obstacleCategory = 0x1 << 1;
 {
     if (isJumping) return;
     isJumping = TRUE;
-    SKSpriteNode* playerNode = (SKSpriteNode*)[self childNodeWithName:@"playerNode"];
     //animate playerNode
     
     if (playerNode != nil)
@@ -138,10 +138,11 @@ static const uint32_t obstacleCategory = 0x1 << 1;
         SKAction * anim =[SKAction sequence:@[ [SKAction scaleBy:.4 duration:.6],
                                                [SKAction scaleBy:2.5 duration:.6]]];
         //isJumping for disabling collision
-        [playerNode runAction:anim completion:^
-        {
-            isJumping = FALSE;
-        }];
+        [playerNode runAction:anim
+                   completion:^
+         {
+             isJumping = FALSE;
+         }];
     }
     
 }
@@ -169,17 +170,18 @@ static const uint32_t obstacleCategory = 0x1 << 1;
         [self setScore];
         if (score >= 10)
         {
-            SKSpriteNode * obstacle = (SKSpriteNode *) [self childNodeWithName:@("obstacleNode")];
-            [obstacle removeAllActions]; //stop rotating
+            [obstacleNode removeAllActions]; //stop rotating
             //player won
-            NSLog(@"PLAYERWON");
+            NSLog(@"WIN");
             [self addChild: [self backToMenuButton]];
         }
+        globalTime += 0.20;
+        [obstacleNode removeAllActions]; //stop rotating
+        [self animateObstacle];
     }
     else if (score < 10)
     {   //player lost
-        SKSpriteNode * obstacle = (SKSpriteNode *) [self childNodeWithName:@("obstacleNode")];
-        [obstacle removeAllActions]; //stop rotating
+        [obstacleNode removeAllActions]; //stop rotating
         GameTwoViewController * vc = (GameTwoViewController*) viewController;
         [vc displayAlert:self];
         vc = nil;
@@ -214,6 +216,7 @@ static const uint32_t obstacleCategory = 0x1 << 1;
         [vc backToMenu];
         vc = nil;
         viewController = nil;
+        [self removeAllChildren];
     }
     else
     {
@@ -224,12 +227,14 @@ static const uint32_t obstacleCategory = 0x1 << 1;
 -(void) restartScene
 {
     //reset variable and restart obstacle animation
+    if (obstacleNode == nil)
+        [self createObstacleNode];
+    globalTime = 0;
     score = 0;
     [self setScore];
     isJumping = FALSE;
-    SKSpriteNode* obs = (SKSpriteNode*)[self childNodeWithName:@"obstacleNode"];
-    obs.zRotation = 0;
-    [self animateObstacle:obs];
+    obstacleNode.zRotation = 0;
+    [self animateObstacle];
 }
 
 
