@@ -59,8 +59,11 @@
         
         
         
-        SKScene *scene = [[FirstGameScene alloc] initWithSize:CGSizeMake(skView.bounds.size.width,
-                                                                         skView.bounds.size.height)];
+        FirstGameScene *scene = [[FirstGameScene alloc] initWithSize:CGSizeMake(skView.bounds.size.width,
+                                                                                
+                                                                                skView.bounds.size.height)];
+        
+        scene.viewController = _viewController;
         NSLog(@"%@",scene);
         [skView presentScene:scene];
         
