@@ -227,8 +227,7 @@ static const uint32_t obstacleCategory = 0x1 << 1;
 -(void) restartScene
 {
     //reset variable and restart obstacle animation
-    if (obstacleNode == nil)
-        [self createObstacleNode];
+    [self initObjects];
     globalTime = 0;
     score = 0;
     [self setScore];
