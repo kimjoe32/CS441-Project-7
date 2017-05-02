@@ -41,7 +41,7 @@ static const uint32_t spikeCategory = 0x1 << 1;
     index = 0;
     x = 1;
     stupidCollisionCounter = 0;
-    //self.physicsWorld.contactDelegate = self;
+    self.physicsWorld.contactDelegate = self;
     self.physicsWorld.gravity = CGVectorMake(0.0,-2.0);
     
    /* dodged = [[SKLabelNode alloc] init];
