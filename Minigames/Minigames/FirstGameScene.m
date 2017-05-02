@@ -56,7 +56,7 @@ static const uint32_t spikeCategory = 0x1 << 1;
     self.physicsBody.friction = 1.0f;
     
     
-    idlePlayer = [SKTexture textureWithImageNamed:@"player1.png"];
+    idlePlayer = [SKTexture textureWithImageNamed:@"gameOnePlayer.png"];
     playerjump = [SKTexture textureWithImageNamed:@"jump.png"];
     player = [SKSpriteNode spriteNodeWithTexture:idlePlayer];
     player.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:player.size];

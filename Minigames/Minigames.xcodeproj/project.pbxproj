@@ -19,7 +19,7 @@
 		25CBB7271EB824CA00EA6F88 /* tryagain_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CBB71F1EB824CA00EA6F88 /* tryagain_button.png */; };
 		25CBB7281EB824CA00EA6F88 /* menubutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CBB7201EB824CA00EA6F88 /* menubutton.png */; };
 		25CBB7291EB824CA00EA6F88 /* jump.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CBB7211EB824CA00EA6F88 /* jump.png */; };
-		25CBB72A1EB824CA00EA6F88 /* player1.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CBB7221EB824CA00EA6F88 /* player1.png */; };
+		25CBB72A1EB824CA00EA6F88 /* gameOnePlayer.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CBB7221EB824CA00EA6F88 /* gameOnePlayer.png */; };
 		25CBB72B1EB824CA00EA6F88 /* spikeE.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CBB7231EB824CA00EA6F88 /* spikeE.png */; };
 		6C8C2F951EB52AB4004A52FC /* GameTwoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8C2F941EB52AB4004A52FC /* GameTwoScene.m */; };
 		6C8C2FEC1EB5C100004A52FC /* GameThreeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8C2FEB1EB5C100004A52FC /* GameThreeScene.m */; };
@@ -79,7 +79,7 @@
 		25CBB71F1EB824CA00EA6F88 /* tryagain_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tryagain_button.png; sourceTree = "<group>"; };
 		25CBB7201EB824CA00EA6F88 /* menubutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubutton.png; sourceTree = "<group>"; };
 		25CBB7211EB824CA00EA6F88 /* jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jump.png; sourceTree = "<group>"; };
-		25CBB7221EB824CA00EA6F88 /* player1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player1.png; sourceTree = "<group>"; };
+		25CBB7221EB824CA00EA6F88 /* gameOnePlayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameOnePlayer.png; sourceTree = "<group>"; };
 		25CBB7231EB824CA00EA6F88 /* spikeE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spikeE.png; sourceTree = "<group>"; };
 		6C8C2F931EB52AA5004A52FC /* GameTwoScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameTwoScene.h; sourceTree = "<group>"; };
 		6C8C2F941EB52AB4004A52FC /* GameTwoScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTwoScene.m; sourceTree = "<group>"; };
@@ -262,7 +262,7 @@
 				25CBB71F1EB824CA00EA6F88 /* tryagain_button.png */,
 				25CBB7201EB824CA00EA6F88 /* menubutton.png */,
 				25CBB7211EB824CA00EA6F88 /* jump.png */,
-				25CBB7221EB824CA00EA6F88 /* player1.png */,
+				25CBB7221EB824CA00EA6F88 /* gameOnePlayer.png */,
 				25CBB7231EB824CA00EA6F88 /* spikeE.png */,
 				258812471EB5219F0059196D /* GameTwo */,
 				258812481EB521A80059196D /* GameThree */,
@@ -424,7 +424,7 @@
 				25CBB7281EB824CA00EA6F88 /* menubutton.png in Resources */,
 				C9D96E661EB17A730011B512 /* Actions.sks in Resources */,
 				25CBB7291EB824CA00EA6F88 /* jump.png in Resources */,
-				25CBB72A1EB824CA00EA6F88 /* player1.png in Resources */,
+				25CBB72A1EB824CA00EA6F88 /* gameOnePlayer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
