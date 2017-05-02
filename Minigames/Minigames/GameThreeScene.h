@@ -8,7 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "GameThreeViewController.h"
-@interface GameThreeScene : SKScene 
+@interface GameThreeScene : SKScene <SKPhysicsContactDelegate>
 @property (weak, nonatomic) UIViewController * viewController;
 @property (nonatomic) BOOL sceneCreated;
 - (void) restartScene;
