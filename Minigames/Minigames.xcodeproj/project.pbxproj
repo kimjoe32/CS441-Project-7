@@ -139,6 +139,17 @@
 		258812461EB521940059196D /* GameOne */ = {
 			isa = PBXGroup;
 			children = (
+				25CBB7191EB824CA00EA6F88 /* GameOneViewController.h */,
+				25CBB71A1EB824CA00EA6F88 /* GameOneViewController.m */,
+				25CBB71B1EB824CA00EA6F88 /* GameOverScene.h */,
+				25CBB71C1EB824CA00EA6F88 /* GameOverScene.m */,
+				25CBB71D1EB824CA00EA6F88 /* FirstGameScene.h */,
+				25CBB71E1EB824CA00EA6F88 /* FirstGameScene.m */,
+				25CBB71F1EB824CA00EA6F88 /* tryagain_button.png */,
+				25CBB7201EB824CA00EA6F88 /* menubutton.png */,
+				25CBB7211EB824CA00EA6F88 /* jump.png */,
+				25CBB7221EB824CA00EA6F88 /* gameOnePlayer.png */,
+				25CBB7231EB824CA00EA6F88 /* spikeE.png */,
 			);
 			name = GameOne;
 			sourceTree = "<group>";
@@ -253,17 +264,6 @@
 				C9D96E6A1EB17A730011B512 /* GameViewController.h */,
 				C9D96E6B1EB17A730011B512 /* GameViewController.m */,
 				258812461EB521940059196D /* GameOne */,
-				25CBB7191EB824CA00EA6F88 /* GameOneViewController.h */,
-				25CBB71A1EB824CA00EA6F88 /* GameOneViewController.m */,
-				25CBB71B1EB824CA00EA6F88 /* GameOverScene.h */,
-				25CBB71C1EB824CA00EA6F88 /* GameOverScene.m */,
-				25CBB71D1EB824CA00EA6F88 /* FirstGameScene.h */,
-				25CBB71E1EB824CA00EA6F88 /* FirstGameScene.m */,
-				25CBB71F1EB824CA00EA6F88 /* tryagain_button.png */,
-				25CBB7201EB824CA00EA6F88 /* menubutton.png */,
-				25CBB7211EB824CA00EA6F88 /* jump.png */,
-				25CBB7221EB824CA00EA6F88 /* gameOnePlayer.png */,
-				25CBB7231EB824CA00EA6F88 /* spikeE.png */,
 				258812471EB5219F0059196D /* GameTwo */,
 				258812481EB521A80059196D /* GameThree */,
 				258812491EB521B10059196D /* GameFour */,
